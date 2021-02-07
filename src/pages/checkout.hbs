@@ -1,0 +1,382 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="checkout">
+    <div class="container">
+        <div class="checkout__row">
+            <div class="checkout__left-col">
+                <h2 class="account-heading checkout__heading checkout__cart-heading">
+                    Корзина
+                </h2>
+                <div class="checkout__cart">
+                    <ul class="checkout__cart-list">
+                        <li class="checkout__cart-list-item">
+                            <div class="checkout__cart-card">
+                                <div class="checkout__cart-card-image-container">
+                                    <img src="img/checkout/cart-1.jpg" alt="" class="checkout__cart-card-image">
+                                </div>
+                                <div class="checkout__cart-card-content">
+                                    <div class="checkout__cart-card-info">
+                                        <h4 class="checkout__cart-card-title">
+                                            Nike Air Max 98
+                                        </h4>
+                                        <div class="checkout__cart-card-color">
+                                            Бежевый
+                                        </div>
+                                        <div class="checkout__cart-card-specs">
+                                            EU 42 | US 9 | UK 8 | x1
+                                        </div>
+                                    </div>
+                                    <div class="checkout__cart-card-price">
+                                        14 290 P
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="checkout__cart-list-item">
+                            <div class="checkout__cart-card">
+                                <div class="checkout__cart-card-image-container">
+                                    <img src="img/checkout/cart-2.jpg" alt="" class="checkout__cart-card-image">
+                                </div>
+                                <div class="checkout__cart-card-content">
+                                    <div class="checkout__cart-card-info">
+                                        <h4 class="checkout__cart-card-title">
+                                            Nike Air Max 98
+                                        </h4>
+                                        <div class="checkout__cart-card-color">
+                                            Бежевый
+                                        </div>
+                                        <div class="checkout__cart-card-specs">
+                                            EU 42 | US 9 | UK 8 | x1
+                                        </div>
+                                    </div>
+                                    <div class="checkout__cart-card-price">
+                                        <div class="checkout__cart-card-price-old">
+                                            14 290 P
+                                        </div>
+                                        <div class="checkout__cart-card-price-new">
+                                            7 145 P
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="checkout__cart-list-item">
+                            <div class="checkout__cart-card">
+                                <div class="checkout__cart-card-image-container">
+                                    <img src="img/checkout/cart-2.jpg" alt="" class="checkout__cart-card-image">
+                                </div>
+                                <div class="checkout__cart-card-content">
+                                    <div class="checkout__cart-card-info">
+                                        <h4 class="checkout__cart-card-title">
+                                            Nike Air Max 98
+                                        </h4>
+                                        <div class="checkout__cart-card-color">
+                                            Бежевый
+                                        </div>
+                                        <div class="checkout__cart-card-specs">
+                                            EU 42 | US 9 | UK 8 | x1
+                                        </div>
+                                    </div>
+                                    <div class="checkout__cart-card-price">
+                                        14 290 P
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="checkout__cart-totals">
+                        <div class="checkout__cart-totals-item">
+                            <div class="checkout__cart-totals-item-key">
+                                Скидка
+                            </div>
+                            <div class="checkout__cart-totals-item-value">
+                                - 1 000 Р
+                            </div>
+                        </div>
+                        <div class="checkout__cart-totals-item">
+                            <div class="checkout__cart-totals-item-key">
+                                Доставка
+                            </div>
+                            <div class="checkout__cart-totals-item-value">
+                                1 000 Р
+                            </div>
+                        </div>
+                        <div class="checkout__cart-totals-item">
+                            <div class="checkout__cart-totals-item-key">
+                                Сумма к оплате:
+                            </div>
+                            <div class="checkout__cart-totals-item-value">
+                                14 290 P
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__right-col">
+
+                <form action="/" method="POST" class="checkout__form" data-need-validation>
+                    <div class="checkout__form-address-data">
+                        <div class="checkout__form-delivery-heading-row">
+                            <div class="account-heading checkout__heading">
+                                1. Введите данные для доставки
+                            </div>
+                            <a href="#" class="account-submit checkout__login-btn">
+                                Войти
+                            </a>
+                        </div>
+                        <div class="checkout__form-delivery-fields">
+                            <div class="checkout__form-delivery-fields-row">
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="text" class="account-input" id="firstname" required
+                                            placeholder="Имя">
+                                        <label class="account-label" for="firstname">
+                                            Имя*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="tel" class="account-input js-phone-input" id="phone" required
+                                            placeholder="телефон" data-parsley-phone>
+                                        <label class="account-label" for="phone">
+                                            Телефон*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+
+                                        <input type="text" class="account-input" id="lastname" required
+                                            placeholder="Фамилия*">
+                                        <label class="account-label" for="lastname">
+                                            Фамилия*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+
+                                        <input type="email" class="account-input" id="email" required
+                                            placeholder="Email*">
+                                        <label class="account-label" for="email">
+                                            Email*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="text" class="account-input" id="country" placeholder="страна"
+                                            required>
+                                        <label class="account-label" for="country">
+                                            Страна*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="text" class="account-input" id="city" required placeholder="город">
+                                        <label class="account-label" for="city">
+                                            Город*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="text" class="account-input" id="region" required
+                                            placeholder="регион">
+                                        <label class="account-label" for="region">
+                                            Регион*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="text" class="account-input" id="street" required
+                                            placeholder="Улица*">
+                                        <label class="account-label" for="street">
+                                            Улица*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-input-wrapper">
+                                        <input type="tel" class="account-input js-index-input" id="index" required
+                                            placeholder="Индекс*">
+                                        <label class="account-label" for="index">
+                                            Индекс*
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout__form-delivery-fields-col">
+                                    <div class="account-address-wrapper">
+                                        <div class="account-address-row">
+                                            <div class="account-address-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="home" required
+                                                        placeholder="Дом*">
+                                                    <label class="account-label" for="home">
+                                                        Дом*
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="account-address-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="flat" required
+                                                        placeholder="Квартира*">
+                                                    <label class="account-label" for="flat">
+                                                        Квартира*
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="account-address-col">
+                                                <div class="account-input-wrapper">
+                                                    <input type="text" class="account-input" id="building" required
+                                                        placeholder="Корпус*">
+                                                    <label class="account-label" for="building">
+                                                        Корпус*
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout__form-select-type">
+                        <div class="checkout__form-select-type-row">
+                            <div class="checkout__form-select-type-col">
+                                <h4 class="account-heading checkout__heading checkout__heading--with-bar">
+                                    2. Вариант доставки
+                                </h4>
+                                <ul class="checkout__form-select-type-list">
+                                    <li class="checkout__form-select-type-list-item">
+                                        <label class="account-checkbox">
+                                            <input type="radio" class="account-checkbox-input" name="delivery-type"
+                                                value="1" checked>
+                                            <span class="account-checkbox-mark account-checkbox-mark--radio">
+
+                                            </span>
+                                            <span class="account-checkbox-text">
+                                                Самовывоз
+                                            </span>
+                                        </label>
+                                        <div class="checkout__form-select-type-text">
+                                            Бесплатно
+                                        </div>
+                                    </li>
+                                    <li class="checkout__form-select-type-list-item">
+                                        <label class="account-checkbox">
+                                            <input type="radio" class="account-checkbox-input" name="delivery-type"
+                                                value="1">
+                                            <span class="account-checkbox-mark account-checkbox-mark--radio">
+
+                                            </span>
+                                            <span class="account-checkbox-text">
+                                                Курьером по городу
+                                            </span>
+                                        </label>
+                                        <div class="checkout__form-select-type-text">
+                                            1 000 Р
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="checkout__form-select-type-col">
+                                <h4 class="account-heading checkout__heading checkout__heading--with-bar">
+                                    3. Оплата
+                                </h4>
+                                <ul class="checkout__form-select-type-list">
+                                    <li class="checkout__form-select-type-list-item">
+                                        <label class="account-checkbox">
+                                            <input type="radio" class="account-checkbox-input" name="payment-type"
+                                                value="1" checked>
+                                            <span class="account-checkbox-mark account-checkbox-mark--radio">
+
+                                            </span>
+                                            <span class="account-checkbox-text">
+                                                Наличными
+                                            </span>
+                                        </label>
+
+                                    </li>
+                                    <li class="checkout__form-select-type-list-item">
+                                        <label class="account-checkbox">
+                                            <input type="radio" class="account-checkbox-input" name="payment-type"
+                                                value="1">
+                                            <span class="account-checkbox-mark account-checkbox-mark--radio">
+
+                                            </span>
+                                            <span class="account-checkbox-text">
+                                                Банковской картой
+                                            </span>
+                                        </label>
+                                        <img src="img/cards.jpg" alt="" class="checkout__form-select-type-image">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout__form-pay">
+                        <div class="checkout__form-pay-row">
+                            <div class="checkout__form-pay-col">
+                                <ul class="account-list">
+                                    <li class="account-list-item">
+                                        Интернет магазин OUTPAC работает согласно российскому законодательству. В нашем
+                                        интернет магазине, Вы можете обменять любое приобретенное изделие.
+                                    </li>
+                                    <li class="account-list-item">
+                                        Гарантия безпроблемного возврата в течении 30 дней
+                                    </li>
+                                    <li class="account-list-item">
+                                        Гарантия качества покупки. Гарантия 3 месяца
+                                    </li>
+                                    <li class="account-list-item">
+                                        Ваши права защищены
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="checkout__form-pay-col">
+                                <div class="checkout__form-total">
+                                    <div class="checkout__form-total-price">
+                                        <div class="checkout__form-total-price-text">
+                                            Сумма к оплате:
+                                        </div>
+                                        <div class="checkout__form-total-price-amount">
+                                            14 290 P
+                                        </div>
+                                    </div>
+                                    <div class="checkout__form-policy">
+                                        <label class="account-checkbox">
+                                            <input type="checkbox" class="account-checkbox-input" required name="rules" value="1">
+                                            <span class="account-checkbox-mark">
+
+                                            </span>
+                                            <span class="account-checkbox-text">
+                                                Согласен с правилами и условями работы интернет-магазина
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <button class="account-submit checkout__form-submit" type="submit">
+                                        Оплатить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

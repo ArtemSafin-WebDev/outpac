@@ -1,0 +1,188 @@
+
+
+.account-heading {
+    font-family: var(--sfui);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: #313131;
+}
+
+.account-input-wrapper {
+    position: relative;
+
+    .parsley-errors-list.filled {
+        font-family: var(--sfui);
+        font-size: 1.2rem;
+        color: #FF3203;
+        margin-top: 0.5rem;
+    }
+}
+
+.account-label {
+    transition: transform .3s;
+    position: absolute;
+    left: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-family: var(--sfui);
+    top: 1.9rem;
+    pointer-events: none;
+    transform-origin: left top;
+    transform: translateZ(0);
+}
+
+.account-input {
+    border: 1px solid #E7E7E7;
+   
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    padding: 0 1.8rem;
+    padding-top: 2.7rem;
+    padding-bottom: 0.8rem;
+    display: block;
+    width: 100%;
+    transition: border-color .3s;
+    &:focus {
+        border-color: black;
+    }
+
+    &.parsley-error {
+        border-color: #FF3203;
+    }
+
+    @include placeholder {
+        opacity: 0;
+    }
+}
+
+.account-input:focus ~ .account-label,
+.account-input:not(:placeholder-shown) ~ .account-label,
+.account-input:-webkit-autofill ~ .account-label {
+    transform: scale(0.8) translateY(-1rem);
+}   
+
+
+.account-checkbox {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+
+    
+}
+
+.account-checkbox-input {
+    @include visuallyHidden();
+}
+
+.account-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid black;
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .2s;
+    &::before {
+        content: '';
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: #000;
+        pointer-events: none;
+        transition: opacity .2s;
+        opacity: 0;
+    }
+
+    .parsley-error & {
+        border-color: #FF3203;
+    }
+
+    &--radio {
+        border-radius: 50%;
+        &::before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.account-checkbox-text {
+    color: #313131;
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+
+.account-checkbox-input:checked ~ .account-checkbox-mark::before {
+    opacity: 1;
+}
+
+
+.account-address-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.8rem;
+}
+
+.account-address-col {
+    width: 33.33%;
+    padding: 0.8rem;
+}
+
+.account-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-list-item {
+    margin-bottom: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    font-family: var(--sfui);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #323232;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: .35rem;
+
+        background-image: url('../img/checkmark.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.account-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 3.4rem;
+    background-color: #181818;
+    color: white;
+    text-align: center;
+    flex-shrink: 0;
+  
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    line-height: 1.2;
+  
+    font-weight: 500;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
