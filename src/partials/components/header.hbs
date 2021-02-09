@@ -273,7 +273,7 @@
             </div>
             <div class="page-header__right-block">
                 <div class="page-header__cart">
-                    <div class="page-header__cart-indicator">
+                    <div class="page-header__cart-indicator js-open-cart">
                         4
                     </div>
                     <div class="page-header__cart-dropdown">
@@ -281,6 +281,12 @@
                             <form action="/" method="POST" class="page-header__cart-form">
                                 <h3 class="page-header__cart-title">
                                     Корзина
+
+                                    <a href="#" class="page-header__cart-close js-cart-close">
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </a>
                                 </h3>
                                 <ul class="page-header__cart-list">
                                     <li class="page-header__cart-list-item">

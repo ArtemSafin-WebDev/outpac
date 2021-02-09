@@ -15,8 +15,6 @@
     &.fixed,
     &.catalog-menu-open {
         background-color: white;
-
-        
     }
 
     &.fixed {
@@ -330,7 +328,6 @@
 }
 
 .page-header__mobile-menu-inner-scroll-wrapper {
-
     @include breakpoint(mobile) {
         height: 100%;
         overflow-x: auto;
@@ -339,7 +336,6 @@
         padding-right: 1.6rem;
         padding-bottom: 8rem;
     }
-   
 }
 
 .page-header__nav {
@@ -400,6 +396,18 @@
     padding-bottom: 9rem;
     display: flex;
 
+    @include breakpoint(tablet) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     @include breakpoint(mobile) {
         padding: 0;
         flex-direction: column;
@@ -410,6 +418,10 @@
     width: 24rem;
     margin-right: 5rem;
     position: relative;
+
+    @include breakpoint(small-tablet) {
+        width: 22rem;
+    }
 
     @include breakpoint(mobile) {
         width: 100%;
@@ -580,10 +592,24 @@
 
 .page-header__cart {
     position: relative;
-    z-index: 400;
 
     @include breakpointMF(small-tablet) {
         &:hover {
+            .page-header__cart-dropdown {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+
+            .page-header__cart-indicator {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        &.active {
             .page-header__cart-dropdown {
                 opacity: 1;
                 visibility: inherit;
@@ -606,6 +632,35 @@
     position: absolute;
     top: 4.5rem;
     left: 6rem;
+
+    @include breakpoint(mobile) {
+        top: auto;
+        left: auto;
+        position: relative;
+        min-height: 9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.page-header__cart-close {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+
+        svg {
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: #1D2734;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1.6rem;
+            position: absolute;
+        }
+    }
 }
 
 .page-header__cart-indicator {
@@ -622,9 +677,9 @@
     font-weight: 500;
     font-size: 1.4rem;
     transition: background-color 0.2s, color 0.2s;
+   
     position: relative;
-    z-index: 50;
-
+    z-index: 400;
     .page-header--dark &,
     .page-header.fixed &,
     .page-header--filled &,
@@ -805,11 +860,14 @@
         height: 100%;
         background-color: rgba(black, 0.6);
         padding: 0.4rem;
+        z-index: 1800;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
 .page-header__cart-dropdown-inner {
-    padding-top: 10rem;
+    
     padding-right: 6rem;
     padding-left: 6rem;
     padding-bottom: 4rem;
@@ -818,6 +876,7 @@
     @include breakpoint(mobile) {
         padding: 0;
         padding: 1.6rem;
+        padding-top: 0;
         padding-bottom: 2.4rem;
     }
 }
@@ -843,7 +902,9 @@
 }
 
 .page-header__nav-dropdown-brands {
+    margin-right: 3rem;
     @include breakpoint(mobile) {
+        margin-right: 0;
         padding: 0 1.6rem;
         margin-bottom: 7.5rem;
     }
@@ -899,23 +960,11 @@
 
 .page-header__nav-dropdown-cards-item {
     margin-right: 4rem;
+    width: 35rem;
+
     &:last-child {
         margin-right: 0;
     }
-    @include breakpoint(mobile) {
-        margin: 0;
-        margin-bottom: 4rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-.page-header__nav-dropdown-card {
-    width: 35rem;
-    display: flex;
-    flex-direction: column;
-    
 
     @include breakpoint(large-desktop) {
         width: 30rem;
@@ -927,7 +976,17 @@
 
     @include breakpoint(mobile) {
         width: 100%;
+        margin: 0;
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
+}
+
+.page-header__nav-dropdown-card {
+    display: flex;
+    flex-direction: column;
 
     &:link,
     &:visited {
@@ -1155,16 +1214,17 @@
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 1.2;
-
+        margin-left: -4rem;
+        padding-left: 4rem;
         svg {
             position: absolute;
-            right: 100%;
+            
             top: 50%;
             transform: translateY(-50%);
             width: 0.8rem;
             height: 1.2rem;
-            fill: #1D2734;
-            margin-right: 4rem;
+            fill: #1d2734;
+            left: 0;
         }
     }
 }

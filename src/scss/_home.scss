@@ -1,14 +1,28 @@
 
+.home {
+    @include breakpoint(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+    }
+}
 
 .home__content {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 
-    // @include breakpoint(small-tablet) {
-    //     min-height: 90rem;
-    // }
+    @include breakpoint(small-tablet) {
+        min-height: 80rem;
+        flex-grow: 1;
+       
+    }
 
     @include breakpoint(mobile) {
         min-height: auto;
@@ -130,7 +144,7 @@
     padding-top: 0.8rem;
     text-transform: uppercase;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
         min-width: 19rem;
         text-align: right;
         display: inline-flex;
@@ -145,7 +159,7 @@
         height: .2rem;
         background-color: currentColor;
 
-        @include breakpoint(mobile) {
+        @include breakpoint(tablet) {
             left: 0;
         }
         
@@ -164,21 +178,38 @@
     flex-direction: column;
     z-index: 30;
     .swiper-pagination-bullet {
-        margin-bottom: 2.2rem;
-        background-color: #fff;
-        width: 1rem;
-        height: 1rem;
+        margin-bottom: 1rem;
+        
+        width: 2rem;
+        height: 2rem;
         flex-shrink: 0;
-        border-radius: 50%;
+        
         opacity: 1;
         border: none;
-        transition: transform .3s;
+        background: transparent;
+        position: relative;
         &:last-child {
             margin-bottom: 0;
         }
 
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            transition: transform .3s;
+        }
+
         &.swiper-pagination-bullet-active {
-            transform: scale(1.8);
+            &::before {
+                transform: translate(-50%, -50%) scale(1.8);
+            }
+          
         }
     }
 }

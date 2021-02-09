@@ -12,6 +12,7 @@ import phoneMask from './phoneMask';
 import validation from './validation';
 import mobileFooterAccordions from './mobileFooterAccordions';
 import mobileMenu from './mobileMenu';
+import cartDropdown from './cartDropdown';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     validation();
     mobileFooterAccordions();
     mobileMenu();
+    cartDropdown();
 });
 
 window.addEventListener('load', function() {
