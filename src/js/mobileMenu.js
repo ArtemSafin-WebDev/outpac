@@ -12,13 +12,14 @@ export default function mobileMenu() {
     
 
     const openMenu = () => {
-        lockScroll(menu);
+        lockScroll(innerMenu);
         document.body.classList.add('mobile-menu-open');
         menuOpen = true;
     }
 
     const closeMenu = () => {
         unlockScroll();
+       
         document.body.classList.remove('mobile-menu-open');
         menuOpen = false;
     }

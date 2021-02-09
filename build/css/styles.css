@@ -1341,7 +1341,7 @@ select:-webkit-autofill:focus {
           flex-direction: column; }
   @media only screen and (max-width: 640px) {
     .home__slider-card {
-      min-height: calc(100vh - 8rem);
+      min-height: calc(100vh - 10rem);
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
@@ -1484,6 +1484,9 @@ select:-webkit-autofill:focus {
     position: fixed; }
   .page-header--filled, .page-header.fixed, .page-header.catalog-menu-open {
     background-color: white; }
+  @media only screen and (max-width: 640px) {
+    .page-header.catalog-menu-open {
+      background-color: transparent; } }
   .page-header.fixed {
     border-bottom: 1px solid #cfcfcf; }
   @media only screen and (max-width: 640px) {
@@ -1749,17 +1752,22 @@ select:-webkit-autofill:focus {
   .page-header__mobile-menu-inner {
     padding-top: 9rem;
     height: 100%;
-    background-color: #fff;
-    padding-top: 8.5rem; } }
-
-@media only screen and (max-width: 640px) {
-  .page-header__mobile-menu-inner-scroll-wrapper {
-    height: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
-    padding-bottom: 8rem; } }
+    padding-bottom: 8rem;
+    background-color: #fff;
+    padding-top: 8.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; }
+    .page-header__mobile-menu-inner::-webkit-scrollbar * {
+      background: transparent; }
+    .page-header__mobile-menu-inner::-webkit-scrollbar-track {
+      background-color: transparent; }
+    .page-header__mobile-menu-inner::-webkit-scrollbar {
+      display: none;
+      background-color: transparent; }
+    .page-header__mobile-menu-inner::-webkit-scrollbar-thumb {
+      background-color: transparent; } }
 
 @media only screen and (max-width: 640px) {
   .page-header__nav {
@@ -1893,6 +1901,15 @@ select:-webkit-autofill:focus {
       padding-left: 8.4rem;
       padding-bottom: 4rem;
       padding-right: 1.6rem; }
+      .page-header__nav-dropdown-categories-layer::-webkit-scrollbar * {
+        background: transparent; }
+      .page-header__nav-dropdown-categories-layer::-webkit-scrollbar-track {
+        background-color: transparent; }
+      .page-header__nav-dropdown-categories-layer::-webkit-scrollbar {
+        display: none;
+        background-color: transparent; }
+      .page-header__nav-dropdown-categories-layer::-webkit-scrollbar-thumb {
+        background-color: transparent; }
       .page-header__nav-dropdown-categories-layer.active {
         opacity: 1;
         visibility: inherit;
@@ -2053,7 +2070,7 @@ select:-webkit-autofill:focus {
         display: block;
         width: 1.6rem;
         height: 1.6rem;
-        fill: #1D2734;
+        fill: #1d2734;
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
@@ -2409,12 +2426,20 @@ select:-webkit-autofill:focus {
 
 .page-header__nav-dropdown-card-image-container {
   position: relative;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 2.4rem;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   .page-header__nav-dropdown-card-image-container::after {
     content: '';
     display: block;
     width: 100%;
     padding-bottom: 100%; }
+  .no-touch .page-header__nav-dropdown-card-image-container:hover .page-header__nav-dropdown-card-image {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03); }
 
 .page-header__nav-dropdown-card-image {
   position: absolute;
@@ -2422,6 +2447,10 @@ select:-webkit-autofill:focus {
   top: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

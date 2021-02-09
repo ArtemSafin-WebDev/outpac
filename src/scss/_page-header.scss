@@ -17,6 +17,12 @@
         background-color: white;
     }
 
+    &.catalog-menu-open {
+        @include breakpoint(mobile) {
+            background-color: transparent;
+        }
+    }
+
     &.fixed {
         border-bottom: 1px solid #cfcfcf;
     }
@@ -264,7 +270,7 @@
         width: 100%;
         height: 100%;
         z-index: 700;
-
+      
         background-color: rgba(black, 0.6);
         padding: 0.4rem;
         opacity: 0;
@@ -320,23 +326,19 @@
     @include breakpoint(mobile) {
         padding-top: 9rem;
         height: 100%;
-
-        background-color: #fff;
-
-        padding-top: 8.5rem;
-    }
-}
-
-.page-header__mobile-menu-inner-scroll-wrapper {
-    @include breakpoint(mobile) {
-        height: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         padding-left: 1.6rem;
         padding-right: 1.6rem;
         padding-bottom: 8rem;
+        background-color: #fff;
+        padding-top: 8.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        @include noScrollbar();
     }
 }
+
+
 
 .page-header__nav {
     @include breakpoint(mobile) {
@@ -473,6 +475,8 @@
         padding-left: 8.4rem;
         padding-bottom: 4rem;
         padding-right: 1.6rem;
+
+        @include noScrollbar();
         &.active {
             opacity: 1;
             visibility: inherit;
@@ -654,7 +658,7 @@
             display: block;
             width: 1.6rem;
             height: 1.6rem;
-            fill: #1D2734;
+            fill: #1d2734;
             top: 50%;
             transform: translateY(-50%);
             right: 1.6rem;
@@ -677,7 +681,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     transition: background-color 0.2s, color 0.2s;
-   
+
     position: relative;
     z-index: 400;
     .page-header--dark &,
@@ -1003,11 +1007,20 @@
 .page-header__nav-dropdown-card-image-container {
     position: relative;
     margin-bottom: 2.4rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &::after {
         content: '';
         display: block;
         width: 100%;
         padding-bottom: 100%;
+    }
+
+    .no-touch &:hover {
+        .page-header__nav-dropdown-card-image {
+            transform: scale(1.03);
+        }
     }
 }
 
@@ -1017,6 +1030,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s;
     @include objectFitCover();
 }
 
@@ -1218,7 +1232,7 @@
         padding-left: 4rem;
         svg {
             position: absolute;
-            
+
             top: 50%;
             transform: translateY(-50%);
             width: 0.8rem;
