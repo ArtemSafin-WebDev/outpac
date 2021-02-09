@@ -271,7 +271,7 @@
         width: 100%;
         height: 100%;
         z-index: 700;
-      
+
         background-color: rgba(black, 0.6);
         padding: 0.4rem;
         opacity: 0;
@@ -338,8 +338,6 @@
         @include noScrollbar();
     }
 }
-
-
 
 .page-header__nav {
     @include breakpoint(mobile) {
@@ -1174,6 +1172,26 @@
         @include breakpoint(mobile) {
             max-height: 15rem;
         }
+    }
+}
+
+.page-header__cart-item-info-quantity select {
+    @include breakpoint(mobile) {
+        border: none;
+        outline: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding-right: 1.6rem;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.5 4.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23979797; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M1.39.21A.88.88,0,0,0,.25.21a.71.71,0,0,0,0,1.08l3.43,3a.88.88,0,0,0,1.14,0l3.43-3a.71.71,0,0,0,0-1.08.88.88,0,0,0-1.14,0L4.25,2.71Z' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1.2rem auto;
+        font: inherit;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        font-weight: 500;
+        color: black;
     }
 }
 
