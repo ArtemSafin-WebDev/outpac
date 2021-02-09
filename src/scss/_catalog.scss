@@ -179,10 +179,6 @@
 
 }
 
-.catalog__filters-dropdown-categories {
-    
-    margin-right: 16rem;
-}
 
 .catalog__filters-dropdown-brands {
     width: 76rem;
@@ -202,6 +198,10 @@
     flex-direction: column;
     align-items: flex-start;
     display: flex;
+    margin-bottom: 6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .catalog__filters-dropdown-group-list {
@@ -444,4 +444,9 @@
 .catalog__card-price-old {
     color: #656565;
     text-decoration: line-through;
+}
+
+.catalog__filters-dropdown-sorting {
+    width: 27rem;
+    margin-left: auto;
 }

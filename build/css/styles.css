@@ -3184,9 +3184,6 @@ select:-webkit-autofill:focus {
   display: -ms-flexbox;
   display: flex; }
 
-.catalog__filters-dropdown-categories {
-  margin-right: 16rem; }
-
 .catalog__filters-dropdown-brands {
   width: 76rem;
   margin-right: 16rem; }
@@ -3209,7 +3206,10 @@ select:-webkit-autofill:focus {
           align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-bottom: 6rem; }
+  .catalog__filters-dropdown-group:last-child {
+    margin-bottom: 0; }
 
 .catalog__filters-dropdown-group-list {
   margin: -1.2rem -7rem;
@@ -3455,6 +3455,10 @@ select:-webkit-autofill:focus {
 .catalog__card-price-old {
   color: #656565;
   text-decoration: line-through; }
+
+.catalog__filters-dropdown-sorting {
+  width: 27rem;
+  margin-left: auto; }
 
 .breadcrumbs__list {
   display: -webkit-box;
