@@ -2282,6 +2282,7 @@ select:-webkit-autofill:focus {
       -webkit-overflow-scrolling: touch; } }
 
 .page-header__cart-dropdown-inner {
+  padding-top: 10rem;
   padding-right: 6rem;
   padding-left: 6rem;
   padding-bottom: 4rem;
