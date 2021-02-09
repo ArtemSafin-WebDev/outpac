@@ -225,10 +225,11 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 0;
-        line-height: 0.6;
+        line-height: 1;
         position: relative;
         z-index: 1300;
-
+        margin-top: -0.4rem;
+        display: block;
         .mobile-menu-open & {
             color: black;
 
@@ -330,7 +331,7 @@
         padding-right: 1.6rem;
         padding-bottom: 8rem;
         background-color: #fff;
-        padding-top: 8.5rem;
+        padding-top: 10rem;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 
@@ -471,9 +472,9 @@
         background-color: #fff;
         z-index: 1800;
 
-        padding-top: 12.5rem;
+        padding-top: 13rem;
         padding-left: 8.4rem;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
         padding-right: 1.6rem;
 
         @include noScrollbar();

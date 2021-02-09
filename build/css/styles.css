@@ -1660,9 +1660,11 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .page-header__logo {
       margin-bottom: 0;
-      line-height: 0.6;
+      line-height: 1;
       position: relative;
-      z-index: 1300; }
+      z-index: 1300;
+      margin-top: -0.4rem;
+      display: block; }
       .mobile-menu-open .page-header__logo {
         color: black; }
         .mobile-menu-open .page-header__logo:link, .mobile-menu-open .page-header__logo:visited {
@@ -1756,7 +1758,7 @@ select:-webkit-autofill:focus {
     padding-right: 1.6rem;
     padding-bottom: 8rem;
     background-color: #fff;
-    padding-top: 8.5rem;
+    padding-top: 10rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; }
     .page-header__mobile-menu-inner::-webkit-scrollbar * {
@@ -1897,9 +1899,9 @@ select:-webkit-autofill:focus {
       transition: opacity 0.3s, visibility 0s linear 0.3s;
       background-color: #fff;
       z-index: 1800;
-      padding-top: 12.5rem;
+      padding-top: 13rem;
       padding-left: 8.4rem;
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
       padding-right: 1.6rem; }
       .page-header__nav-dropdown-categories-layer::-webkit-scrollbar * {
         background: transparent; }
