@@ -10,6 +10,8 @@ import fixedHeader from './fixedHeader';
 import tableOfSizes from './tableOfSizes';
 import phoneMask from './phoneMask';
 import validation from './validation';
+import mobileFooterAccordions from './mobileFooterAccordions';
+import mobileMenu from './mobileMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -23,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     tableOfSizes();
     phoneMask();
     validation();
+    mobileFooterAccordions();
+    mobileMenu();
 });
 
 window.addEventListener('load', function() {

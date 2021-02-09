@@ -11,205 +11,265 @@
                 <a href="#" class="page-header__login-link">
                     вход на сайт
                 </a>
+                <button class="page-header__burger">
+                    <span class="page-header__burger-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
             </div>
 
             <div class="page-header__logo-block">
                 <a href="#" class="page-header__logo">
                     Outpac
                 </a>
+                <div class="page-header__mobile-menu">
+                    <div class="page-header__mobile-menu-inner">
+                        <div class="page-header__mobile-menu-inner-scroll-wrapper">
+                            <form action="/" method="POST" class="page-header__mobile-search">
+                                <input type="search" class="page-header__mobile-search-input" placeholder="Поиск">
+                                <button class="page-header__mobile-search-submit">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <nav class="page-header__nav">
+                                <ul class="page-header__nav-list">
+                                    <li class="page-header__nav-list-item">
+                                        <a href="#" class="page-header__nav-link">
+                                            Новинки
+                                        </a>
+                                    </li>
+                                    <li class="page-header__nav-list-item js-nav-dropdown-link">
+                                        <a href="#" class="page-header__nav-link" data-category="clothes">
+                                            Одежда
 
-                <nav class="page-header__nav">
-                    <ul class="page-header__nav-list">
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                Новинки
-                            </a>
-                        </li>
-                        <li class="page-header__nav-list-item js-nav-dropdown-link">
-                            <a href="#" class="page-header__nav-link">
-                                Одежда
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </a>
 
-                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
-                                    <use xlink:href="#arrow-down"></use>
-                                </svg>
-                            </a>
-                            <div class="page-header__nav-dropdown">
-                                <div class="page-header__nav-dropdown-inner">
-                                    <div class="container">
-                                        <div class="page-header__nav-dropdown-row">
+                                    </li>
+                                    <li class="page-header__nav-list-item js-nav-dropdown-link">
+                                        <a href="#" class="page-header__nav-link" data-category="shoes">
+                                            Обувь
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-header__nav-list-item">
+                                        <a href="#" class="page-header__nav-link">
+                                            Аксессуары
+                                        </a>
+                                    </li>
+                                    <li class="page-header__nav-list-item">
+                                        <a href="#" class="page-header__nav-link">
+                                            Блог
+                                        </a>
+                                    </li>
+                                    <li class="page-header__nav-list-item">
+                                        <a href="#" class="page-header__nav-link page-header__nav-link--red">
+                                            SALE
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="page-header__nav-dropdown">
+                                    <div class="page-header__nav-dropdown-inner">
+                                        <div class="container">
+                                            <div class="page-header__nav-dropdown-row">
 
 
-                                            <div class="page-header__nav-dropdown-categories">
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Вся одежда
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Брюки
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Джинсы
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Жилеты
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Куртки
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Нижнее белье
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Поло
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Рубашки
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Свитеры
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Спортивные костюмы
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Толстовки
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Футболки
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Шорты
-                                                </a>
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Юбки
-                                                </a>
-                                            </div>
-                                            <div class="page-header__nav-dropdown-brands">
-                                                <a href="#" class="page-header__nav-dropdown-categories-link">
-                                                    Все бренды
-                                                </a>
-                                                <div class="page-header__nav-dropdown-brands-links">
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        adidas Originals
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Air Jordan
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        ASICS
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        badoutfit
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Barbour
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Carhartt WIP
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Champion
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        C.P. Company
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        ewos2766
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Helly Hansen
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Levi’s
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Marshall Artist
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Napapijri
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Nike
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Puma
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Saturdays NYC
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Stussy
-                                                    </a>
-                                                    <a href="#" class="page-header__nav-dropdown-brands-link">
-                                                        Stussy
-                                                    </a>
+                                                <div class="page-header__nav-dropdown-categories">
+                                                    <div class="page-header__nav-dropdown-categories-layer"
+                                                        data-category="clothes">
+
+                                                        <a href="#"
+                                                            class="page-header__nav-dropdown-categories-back-link js-nav-dropdown-back">
+                                                            <svg width="16" height="16" aria-hidden="true"
+                                                                class="icon-arrow-down">
+                                                                <use xlink:href="#arrow-left"></use>
+                                                            </svg>
+                                                            Одежда
+                                                        </a>
+
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Вся одежда
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Брюки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Джинсы
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Жилеты
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Куртки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Нижнее белье
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Поло
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Рубашки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Свитеры
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Спортивные костюмы
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Толстовки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Футболки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Шорты
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Юбки
+                                                        </a>
+                                                    </div>
+                                                    <div class="page-header__nav-dropdown-categories-layer"
+                                                        data-category="shoes">
+
+                                                        <a href="#"
+                                                            class="page-header__nav-dropdown-categories-back-link js-nav-dropdown-back">
+                                                            <svg width="16" height="16" aria-hidden="true"
+                                                                class="icon-arrow-down">
+                                                                <use xlink:href="#arrow-left"></use>
+                                                            </svg>
+                                                            Обувь
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Вся обувь
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Кроссовки
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                            Кеды
+                                                        </a>
+
+                                                    </div>
+
                                                 </div>
-                                            </div>
-
-                                            <div class="page-header__nav-dropdown-cards">
-                                                <div class="page-header__nav-dropdown-cards-item">
-                                                    <a href="#" class="page-header__nav-dropdown-card">
-                                                        <div class="page-header__nav-dropdown-card-image-container">
-                                                            <img src="img/page-header-card-1.jpg" alt=""
-                                                                class="page-header__nav-dropdown-card-image">
-                                                        </div>
-                                                        <h5 class="page-header__nav-dropdown-card-1-title">
-                                                            Last Size! С 17 по 21 июля
-                                                            мы предоставляем скидку
-                                                            на последние размеры
-                                                        </h5>
-                                                        <div class="page-header__nav-dropdown-card-details">
-                                                            Подробнее
-                                                        </div>
+                                                <div class="page-header__nav-dropdown-brands">
+                                                    <a href="#" class="page-header__nav-dropdown-categories-link">
+                                                        Все бренды
                                                     </a>
+                                                    <div class="page-header__nav-dropdown-brands-links">
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            adidas Originals
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Air Jordan
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            ASICS
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            badoutfit
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Barbour
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Carhartt WIP
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Champion
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            C.P. Company
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            ewos2766
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Helly Hansen
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Levi’s
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Marshall Artist
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Napapijri
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Nike
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Puma
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Saturdays NYC
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Stussy
+                                                        </a>
+                                                        <a href="#" class="page-header__nav-dropdown-brands-link">
+                                                            Stussy
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="page-header__nav-dropdown-cards-item">
-                                                    <a href="#" class="page-header__nav-dropdown-card">
-                                                        <div class="page-header__nav-dropdown-card-image-container">
-                                                            <img src="img/page-header-card-2.jpg" alt=""
-                                                                class="page-header__nav-dropdown-card-image">
-                                                        </div>
-                                                        <div class="page-header__nav-dropdown-card-season">
-                                                            Весна 2019
-                                                        </div>
-                                                        <h5 class="page-header__nav-dropdown-card-2-title">
-                                                            Nike Air Max 98 (бежевый)
-                                                        </h5>
-                                                        <div class="page-header__nav-dropdown-card-2-price">
-                                                            14 290 P
-                                                        </div>
 
-                                                    </a>
+                                                <div class="page-header__nav-dropdown-cards">
+                                                    <div class="page-header__nav-dropdown-cards-item">
+                                                        <a href="#" class="page-header__nav-dropdown-card">
+                                                            <div class="page-header__nav-dropdown-card-image-container">
+                                                                <img src="img/page-header-card-1.jpg" alt=""
+                                                                    class="page-header__nav-dropdown-card-image">
+                                                            </div>
+                                                            <h5 class="page-header__nav-dropdown-card-1-title">
+                                                                Last Size! С 17 по 21 июля
+                                                                мы предоставляем скидку
+                                                                на последние размеры
+                                                            </h5>
+                                                            <div class="page-header__nav-dropdown-card-details">
+                                                                Подробнее
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="page-header__nav-dropdown-cards-item">
+                                                        <a href="#" class="page-header__nav-dropdown-card">
+                                                            <div class="page-header__nav-dropdown-card-image-container">
+                                                                <img src="img/page-header-card-2.jpg" alt=""
+                                                                    class="page-header__nav-dropdown-card-image">
+                                                            </div>
+                                                            <div class="page-header__nav-dropdown-card-season">
+                                                                Весна 2019
+                                                            </div>
+                                                            <h5 class="page-header__nav-dropdown-card-2-title">
+                                                                Nike Air Max 98 (бежевый)
+                                                            </h5>
+                                                            <div class="page-header__nav-dropdown-card-2-price">
+                                                                14 290 P
+                                                            </div>
+
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
-
                                 </div>
-                            </div>
-                        </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                Обувь
-
-                            </a>
-                        </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                Аксессуары
-                            </a>
-                        </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                Блог
-                            </a>
-                        </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link page-header__nav-link--red">
-                                SALE
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="page-header__right-block">
                 <div class="page-header__cart">
