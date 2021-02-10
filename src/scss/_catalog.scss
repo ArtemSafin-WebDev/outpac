@@ -56,6 +56,10 @@
     padding: 2rem 0.8rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 50%;
+    }
 }
 
 .catalog__grid-card {
@@ -76,6 +80,10 @@
     margin-bottom: 2.4rem;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.6rem;
+    }
 
     &::after {
         content: '';
@@ -99,6 +107,12 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+        display: contents;
+    }
 }
 
 .catalog__grid-card-title {
@@ -106,6 +120,12 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
 }
 
 .catalog__grid-card-price {
@@ -115,6 +135,14 @@
     font-size: 1.4rem;
     line-height: 2rem;
     margin-left: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        order: 10;
+        margin-left: 0;
+        margin-top: 0.2rem;
+    }
 }
 
 .catalog__grid-card-category {
@@ -123,6 +151,11 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 
 .catalog__filters {
@@ -256,8 +289,6 @@
     @include breakpoint(mobile) {
         margin-bottom: 0;
     }
-
-    
 }
 
 .catalog__filters-dropdown-group {
@@ -653,9 +684,7 @@
     }
 }
 
-
 .catalog__filters-accordion-btn {
-
     svg {
         display: none;
     }
@@ -669,10 +698,10 @@
             height: 0.6rem;
             flex-shrink: 0;
             margin-left: 2rem;
-            fill: #AEB4BB;
-            
-            transition: transform .2s;
-    
+            fill: #aeb4bb;
+
+            transition: transform 0.2s;
+
             .catalog__filters-accordion.active & {
                 transform: rotate(180deg);
             }
@@ -680,14 +709,12 @@
     }
 }
 
-
 .catalog__filters-accordion-content {
     @include breakpoint(mobile) {
         height: 0;
         overflow: hidden;
     }
 }
-
 
 .catalog__filters-accordion-content-inner {
     @include breakpoint(mobile) {

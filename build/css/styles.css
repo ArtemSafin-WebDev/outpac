@@ -3054,6 +3054,9 @@ select:-webkit-autofill:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-item {
+      width: 50%; } }
 
 .catalog__grid-card {
   display: -webkit-box;
@@ -3079,6 +3082,9 @@ select:-webkit-autofill:focus {
           backface-visibility: hidden;
   -webkit-transform: translateZ(0);
           transform: translateZ(0); }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-card-image-container {
+      margin-bottom: 1.6rem; } }
   .catalog__grid-card-image-container::after {
     content: '';
     display: block;
@@ -3111,12 +3117,30 @@ select:-webkit-autofill:focus {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-card-top-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      display: contents; } }
 
 .catalog__grid-card-title {
   font-family: var(--sfui);
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-card-title {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.2rem; } }
 
 .catalog__grid-card-price {
   color: #808080;
@@ -3125,6 +3149,15 @@ select:-webkit-autofill:focus {
   font-size: 1.4rem;
   line-height: 2rem;
   margin-left: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-card-price {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      -webkit-box-ordinal-group: 11;
+          -ms-flex-order: 10;
+              order: 10;
+      margin-left: 0;
+      margin-top: 0.2rem; } }
 
 .catalog__grid-card-category {
   color: #808080;
@@ -3132,6 +3165,10 @@ select:-webkit-autofill:focus {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .catalog__grid-card-category {
+      font-size: 1.2rem;
+      line-height: 1.5rem; } }
 
 .catalog__filters {
   -ms-flex-item-align: stretch;
@@ -3684,11 +3721,11 @@ select:-webkit-autofill:focus {
       -ms-flex-negative: 0;
           flex-shrink: 0;
       margin-left: 2rem;
-      fill: #AEB4BB;
-      -webkit-transition: -webkit-transform .2s;
-      transition: -webkit-transform .2s;
-      transition: transform .2s;
-      transition: transform .2s, -webkit-transform .2s; }
+      fill: #aeb4bb;
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+      transition: transform 0.2s, -webkit-transform 0.2s; }
       .catalog__filters-accordion.active .catalog__filters-accordion-btn svg {
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); } }
