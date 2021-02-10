@@ -15,6 +15,7 @@ import mobileMenu from './mobileMenu';
 import cartDropdown from './cartDropdown';
 import deliveryInfo from './deliveryInfo';
 import stickyProduct from './stickyProduct';
+import recommendedSlider from './recommendedSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cartDropdown();
     deliveryInfo();
     stickyProduct();
+    recommendedSlider();
 });
 
 window.addEventListener('load', function() {

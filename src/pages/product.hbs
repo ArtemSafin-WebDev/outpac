@@ -5,7 +5,7 @@
 <section class="product">
     <div class="container">
         <div class="product__row">
-            <div class="product__left-col">
+            <div class="product__left-col js-sticky-product-images">
                 <div class="product__images">
                     <div class="product__image-block">
                         <a href="img/product-1/1.jpg" class="product__image-link" data-fancybox="product-gallery">
@@ -30,218 +30,137 @@
                 </div>
             </div>
             <div class="product__right-col">
-                <div class="breadcrumbs product__breadcrumbs">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__list-item">
-                            <a href="#" class="breadcrumbs__link">
-                                Главная
+                <div class="product__content-wrapper js-sticky-product-sidebar">
+                    <div class="breadcrumbs product__breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__list-item">
+                                <a href="#" class="breadcrumbs__link">
+                                    Главная
 
-                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
-                                    <use xlink:href="#arrow-right"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="breadcrumbs__list-item">
-                            <a href="#" class="breadcrumbs__link">
-                                Одежда
-                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
-                                    <use xlink:href="#arrow-right"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="breadcrumbs__list-item active">
-                            <a href="#" class="breadcrumbs__link">
-                                Рубашки
-                                <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
-                                    <use xlink:href="#arrow-right"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="product__content">
-                    <div class="product__season">
-                        SUMMER 2019
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__list-item">
+                                <a href="#" class="breadcrumbs__link">
+                                    Одежда
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__list-item active">
+                                <a href="#" class="breadcrumbs__link">
+                                    Рубашки
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <h1 class="product__title">
-                        Худи Saturdays Surf<br>
-                        <em>
-                            Оранжевый
-                        </em>
-                        <a href="#" class="product__fav-link">
-                            <svg width="16" height="16" aria-hidden="true" class="icon-star">
-                                <use xlink:href="#star"></use>
-                            </svg>
+                    <div class="product__content">
+                        <div class="product__season">
+                            SUMMER 2019
+                        </div>
+                        <h1 class="product__title">
+                            Худи Saturdays Surf<br>
+                            <em>
+                                Оранжевый
+                            </em>
+                            <a href="#" class="product__fav-link">
+                                <svg width="16" height="16" aria-hidden="true" class="icon-star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </a>
+                        </h1>
+                        <div class="product__prices">
+                            <div class="product__new-price">
+                                14 290
+                            </div>
+                            <div class="product__price-divider">
+                                /
+                            </div>
+                            <div class="product__old-price">
+                                Старая цена 22 900
+                            </div>
+                        </div>
+                        <form class="product__variants" method="POST" action="/">
+                            <div class="product__variants-row">
+                                <div class="product__variants-col">
+                                    <div class="product__variants-select">
+                                        <select name="size" class="js-custom-select">
+                                            <option value="XS">
+                                                XS
+                                            </option>
+                                            <option value="S">
+                                                S
+                                            </option>
+                                            <option value="M">
+                                                M
+                                            </option>
+                                            <option value="L">
+                                                L
+                                            </option>
+                                            <option value="XL">
+                                                XL
+                                            </option>
+                                            <option value="XXL">
+                                                XXL
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="product__variants-col">
+                                    <div class="product__variants-select">
+                                        <select name="color" class="js-custom-select">
+                                            <option value="" placeholder>Цвет</option>
+                                            <option value="white">Белый</option>
+                                            <option value="black">Черный</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="product__variants-add-to-cart">
+                                В корзину
+                            </button>
+                        </form>
+                        <a href="#" class="product__sizes-table-link js-open-sizes-table">
+                            Таблица размеров
                         </a>
-                    </h1>
-                    <div class="product__prices">
-                        <div class="product__new-price">
-                            14 290
-                        </div>
-                        <div class="product__price-divider">
-                            /
-                        </div>
-                        <div class="product__old-price">
-                            Старая цена 22 900
-                        </div>
-                    </div>
-                    <form class="product__variants" method="POST" action="/">
-                        <div class="product__variants-row">
-                            <div class="product__variants-col">
-                                <div class="product__variants-select">
-                                    <select name="size" class="js-custom-select">
-                                        <option value="XS">
-                                            XS
-                                        </option>
-                                        <option value="S">
-                                            S
-                                        </option>
-                                        <option value="M">
-                                            M
-                                        </option>
-                                        <option value="L">
-                                            L
-                                        </option>
-                                        <option value="XL">
-                                            XL
-                                        </option>
-                                        <option value="XXL">
-                                            XXL
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="product__variants-col">
-                                <div class="product__variants-select">
-                                    <select name="color" class="js-custom-select">
-                                        <option value="" placeholder>Цвет</option>
-                                        <option value="white">Белый</option>
-                                        <option value="black">Черный</option>
-                                    </select>
-                                </div>
+                        <div class="product__description">
+                            <h3 class="product__description-heading">
+                                Описание:
+                            </h3>
+                            <div class="product__description-text">
+                                <p>
+                                    100% cotton. Printed front
+                                </p>
+                                <p>
+                                    Когда речь заходит об игре в баскетбол, каждый ассоциативно вспоминает "Джорданы" и
+                                    неизмеримый вклад компании Nike в спортивную индустрию. Несмотря на то, что модель
+                                    Air
+                                    Max 98 — полноценные ретро-раннеры, дизайнеры отдают дань NBA All-Star, выпуская
+                                    цветовое решение ‘Spirit Teal’. Итерация получила фирменные цвета в честь
+                                    профессионального баскетбольного клуба «Шарло́тт Хорнетс», которым владеет сам Майкл
+                                    Джордан.
+                                </p>
+                                <p style="color: #FF0000; text-transform: uppercase;">
+                                    FINAL SALE
+                                </p>
                             </div>
                         </div>
-                        <button class="product__variants-add-to-cart">
-                            В корзину
-                        </button>
-                    </form>
-                    <a href="#" class="product__sizes-table-link js-open-sizes-table">
-                        Таблица размеров
-                    </a>
-                    <div class="product__description">
-                        <h3 class="product__description-heading">
-                            Описание:
-                        </h3>
-                        <div class="product__description-text">
-                            <p>
-                                100% cotton. Printed front
-                            </p>
-                            <p>
-                                Когда речь заходит об игре в баскетбол, каждый ассоциативно вспоминает "Джорданы" и
-                                неизмеримый вклад компании Nike в спортивную индустрию. Несмотря на то, что модель Air
-                                Max 98 — полноценные ретро-раннеры, дизайнеры отдают дань NBA All-Star, выпуская
-                                цветовое решение ‘Spirit Teal’. Итерация получила фирменные цвета в честь
-                                профессионального баскетбольного клуба «Шарло́тт Хорнетс», которым владеет сам Майкл
-                                Джордан.
-                            </p>
-                            <p style="color: #FF0000; text-transform: uppercase;">
-                                FINAL SALE
-                            </p>
-                        </div>
+                        <a href="#" class="product__delivery-info-link js-delivery-info-open">
+                            Информация о доставке
+                        </a>
                     </div>
-                    <a href="#" class="product__delivery-info-link js-delivery-info-open">
-                        Информация о доставке
-                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="recommended">
-    <div class="container">
-        <div class="recommended__content">
-            <h2 class="recommended__heading">
-                Рекомендуем посмотреть
-            </h2>
-            <div class="recommended__products">
-                <ul class="recommended__products-list">
-                    <li class="recommended__products-list-item">
-                        <a href="#" class="recommended__products-card">
-                            <div class="recommended__products-card-image-container">
-                                <img src="img/recommended/1.jpg" alt="" class="recommended__products-card-image">
-                            </div>
-                            <h4 class="recommended__products-card-title">
-                                Stussy
-                            </h4>
-                            <div class="recommended__products-card-color">
-                                Gandem
-                            </div>
-                            <div class="recommended__products-card-price">
-                                <div class="recommended__products-card-price-new">
-                                    8 500 P
-                                </div>
-                                <div class="recommended__products-card-price-divider">
-                                    /
-                                </div>
-                                <div class="recommended__products-card-price-old">
-                                    12 000 Р
-                                </div>
-
-                            </div>
-                        </a>
-                    </li>
-                    <li class="recommended__products-list-item">
-                        <a href="#" class="recommended__products-card">
-                            <div class="recommended__products-card-image-container">
-                                <img src="img/recommended/2.jpg" alt="" class="recommended__products-card-image">
-                            </div>
-                            <h4 class="recommended__products-card-title">
-                                The Hundreds
-                            </h4>
-                            <div class="recommended__products-card-color">
-                                Черный
-                            </div>
-                            <div class="recommended__products-card-price">
-                                3 290 P
-
-                            </div>
-                        </a>
-                    </li>
-                    <li class="recommended__products-list-item">
-                        <a href="#" class="recommended__products-card">
-                            <div class="recommended__products-card-image-container">
-                                <img src="img/recommended/3.jpg" alt="" class="recommended__products-card-image">
-                            </div>
-                            <h4 class="recommended__products-card-title">
-                                The Hundreds
-                            </h4>
-                            <div class="recommended__products-card-color">
-                                Черный
-                            </div>
-                            <div class="recommended__products-card-price">
-                                4 090 P
-
-                            </div>
-                        </a>
-                    </li>
-                    <li class="recommended__products-list-item">
-                        <a href="#" class="recommended__products-card">
-                            <div class="recommended__products-card-image-container">
-                                <img src="img/recommended/4.jpg" alt="" class="recommended__products-card-image">
-                            </div>
-                            <h4 class="recommended__products-card-title">
-                                The Hundreds
-                            </h4>
-                            <div class="recommended__products-card-price">
-                                5 000 P
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+ {{> recommended }}
 
 {{/content}}
 {{/extend}}

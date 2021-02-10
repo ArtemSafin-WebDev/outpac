@@ -47,14 +47,34 @@
 .recommended__products-card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover {
+        .recommended__products-card-image {
+            transform: scale(1.03);
+        }
+
+        .recommended__products-card-gallery-arrow {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
 }
 
-.recommended__products-card-image-container {
-    position: relative;
+.recommended__products-card-gallery {
     margin-bottom: 2.4rem;
     @include breakpoint(mobile) {
         margin-bottom: 1.6rem;
     }
+}
+
+.recommended__products-card-image-container {
+    position: relative;
+   
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+   
     &::after {
         content: '';
         padding-bottom: 117%;
@@ -69,6 +89,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    transition: transform .3s;
     @include objectFitCover();
 }
 
@@ -135,5 +156,40 @@
     @include breakpoint(mobile) {
         max-width: none;
         margin: 0;
+    }
+}
+
+
+.recommended__products-card-gallery-arrow {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    transition: opacity 0.2s;
+    opacity: 0;
+    &--prev {
+        left: 1.5rem;
+    }
+
+    &--next {
+        right: 1.5rem;
+    }
+
+    svg {
+        width: 0.6rem;
+        height: 1.2rem;
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
