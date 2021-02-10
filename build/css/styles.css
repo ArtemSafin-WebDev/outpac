@@ -1943,7 +1943,9 @@ select:-webkit-autofill:focus {
 .page-header__nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative;
+  z-index: 50; }
   @media only screen and (max-width: 640px) {
     .page-header__nav-list {
       -webkit-box-orient: vertical;
@@ -1970,7 +1972,8 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: white; }
   .page-header__nav-link svg {
     width: 1rem;
     height: 0.6rem;
@@ -2004,10 +2007,23 @@ select:-webkit-autofill:focus {
     color: black !important; }
   .page-header--dark .page-header__nav-link {
     color: #b3b3b3; }
+    .page-header--dark .page-header__nav-link:link, .page-header--dark .page-header__nav-link:visited {
+      color: #b3b3b3; }
+    @media only screen and (max-width: 640px) {
+      .page-header--dark .page-header__nav-link {
+        color: black; }
+        .page-header--dark .page-header__nav-link:link, .page-header--dark .page-header__nav-link:visited {
+          color: black; } }
   .page-header.fixed .page-header__nav-link,
   .page-header--filled .page-header__nav-link,
   .catalog-menu-open .page-header__nav-link {
     color: #b3b3b3; }
+    .page-header.fixed .page-header__nav-link:link, .page-header.fixed .page-header__nav-link:visited,
+    .page-header--filled .page-header__nav-link:link,
+    .page-header--filled .page-header__nav-link:visited,
+    .catalog-menu-open .page-header__nav-link:link,
+    .catalog-menu-open .page-header__nav-link:visited {
+      color: #b3b3b3; }
     .page-header.fixed .page-header__nav-link.active,
     .page-header--filled .page-header__nav-link.active,
     .catalog-menu-open .page-header__nav-link.active {
@@ -2016,6 +2032,17 @@ select:-webkit-autofill:focus {
     .page-header--filled .page-header__nav-link:hover,
     .catalog-menu-open .page-header__nav-link:hover {
       color: black; }
+    @media only screen and (max-width: 640px) {
+      .page-header.fixed .page-header__nav-link,
+      .page-header--filled .page-header__nav-link,
+      .catalog-menu-open .page-header__nav-link {
+        color: black; }
+        .page-header.fixed .page-header__nav-link:link, .page-header.fixed .page-header__nav-link:visited,
+        .page-header--filled .page-header__nav-link:link,
+        .page-header--filled .page-header__nav-link:visited,
+        .catalog-menu-open .page-header__nav-link:link,
+        .catalog-menu-open .page-header__nav-link:visited {
+          color: black; } }
   @media only screen and (max-width: 640px) {
     .page-header__nav-link {
       color: black; }
@@ -2024,24 +2051,14 @@ select:-webkit-autofill:focus {
 
 .page-header__cart {
   position: relative; }
-  @media only screen and (min-width: 641px) {
-    .page-header__cart:hover .page-header__cart-dropdown {
-      opacity: 1;
-      visibility: inherit;
-      -webkit-transition: opacity 0.3s, visibility 0.3s;
-      transition: opacity 0.3s, visibility 0.3s; }
-    .page-header__cart:hover .page-header__cart-indicator {
-      background-color: black;
-      color: white; } }
-  @media only screen and (max-width: 640px) {
-    .page-header__cart.active .page-header__cart-dropdown {
-      opacity: 1;
-      visibility: inherit;
-      -webkit-transition: opacity 0.3s, visibility 0.3s;
-      transition: opacity 0.3s, visibility 0.3s; }
-    .page-header__cart.active .page-header__cart-indicator {
-      background-color: black;
-      color: white; } }
+  .page-header__cart.active .page-header__cart-dropdown {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
+  .page-header__cart.active .page-header__cart-indicator {
+    background-color: black;
+    color: white; }
 
 .page-header__cart-title {
   font-weight: 500;
@@ -2666,6 +2683,25 @@ select:-webkit-autofill:focus {
         height: 1.2rem;
         fill: #1d2734;
         left: 0; } }
+
+@media only screen and (min-width: 641px) {
+  .page-header__cart-scroll-wrapper {
+    max-height: 54rem;
+    overflow-x: hidden;
+    margin-right: -1rem;
+    padding-right: 1rem;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch; }
+    .page-header__cart-scroll-wrapper::-webkit-scrollbar {
+      background-color: white;
+      width: 0.4rem; }
+    .page-header__cart-scroll-wrapper::-webkit-scrollbar-thumb {
+      background-color: black; }
+    .page-header__cart-scroll-wrapper::-webkit-scrollbar-button {
+      display: none; }
+    .page-header__cart-scroll-wrapper::-webkit-scrollbar-track {
+      background-color: white; } }
 
 .page-footer {
   font-family: var(--sfui);
