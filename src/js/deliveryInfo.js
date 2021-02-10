@@ -1,11 +1,11 @@
 import { lockScroll, unlockScroll } from './scrollBlocker';
 
-export default function tableOfSizes() {
-    const tableOfSizes = document.querySelector('.js-table-of-sizes');
+export default function deliveryInfo() {
+    const tableOfSizes = document.querySelector('.js-delivery-info');
     let tableOpen = false;
 
-    const openBtns = Array.from(document.querySelectorAll('.js-open-sizes-table'));
-    const closeBtns = Array.from(document.querySelectorAll('.js-close-sizes-table'));
+    const openBtns = Array.from(document.querySelectorAll('.js-delivery-info-open'));
+    const closeBtns = Array.from(document.querySelectorAll('.js-delivery-info-close'));
 
     if (!tableOfSizes) return;
 

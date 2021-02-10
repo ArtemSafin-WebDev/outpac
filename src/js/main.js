@@ -13,6 +13,8 @@ import validation from './validation';
 import mobileFooterAccordions from './mobileFooterAccordions';
 import mobileMenu from './mobileMenu';
 import cartDropdown from './cartDropdown';
+import deliveryInfo from './deliveryInfo';
+import stickyProduct from './stickyProduct';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileFooterAccordions();
     mobileMenu();
     cartDropdown();
+    deliveryInfo();
+    stickyProduct();
 });
 
 window.addEventListener('load', function() {

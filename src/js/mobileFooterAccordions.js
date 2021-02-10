@@ -1,5 +1,6 @@
 import { MOBILE_WIDTH } from './constants';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function mobileFooterAccordions() {
     if (!window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
@@ -11,13 +12,15 @@ export default function mobileFooterAccordions() {
     const openAccordion = element => {
         gsap.to(element, {
             height: 'auto',
-            duration: SPEED
+            duration: SPEED,
+            onComplete: () => ScrollTrigger.refresh()
         });
     };
     const closeAccordion = element => {
         gsap.to(element, {
             height: 0,
-            duration: SPEED
+            duration: SPEED,
+            onComplete: () => ScrollTrigger.refresh()
         });
     };
 

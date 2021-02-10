@@ -1,5 +1,6 @@
 import { MOBILE_WIDTH } from './constants';
 import { lockScroll, unlockScroll } from './scrollBlocker';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
 export default function filters() {
@@ -51,13 +52,16 @@ export default function filters() {
             const openAccordion = element => {
                 gsap.to(element, {
                     height: 'auto',
-                    duration: SPEED
+                    duration: SPEED,
+                    onComplete: () => ScrollTrigger.refresh()
+                    
                 });
             };
             const closeAccordion = element => {
                 gsap.to(element, {
                     height: 0,
-                    duration: SPEED
+                    duration: SPEED,
+                    onComplete: () => ScrollTrigger.refresh()
                 });
             };
 

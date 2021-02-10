@@ -5,7 +5,7 @@
     width: 100%;
     z-index: 700;
     padding-top: 4.5rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 
     &.js-fixed-header {
         position: fixed;
@@ -19,12 +19,16 @@
 
     &.catalog-menu-open {
         @include breakpoint(mobile) {
-            background-color: transparent;
+            background: transparent;
         }
     }
 
     &.fixed {
         border-bottom: 1px solid #cfcfcf;
+        @include breakpoint(mobile) {
+            border: none;
+            box-shadow: 0 0 1rem rgba(black, 0.1);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -250,7 +254,9 @@
     }
 
     .page-header.fixed & {
-        display: none;
+        @include breakpointMF(small-tablet) {
+            display: none;
+        }
     }
 
     .page-header.fixed &,
@@ -332,7 +338,7 @@
         padding-right: 1.6rem;
         padding-bottom: 8rem;
         background-color: #fff;
-        padding-top:  8.5rem;
+        padding-top: 8.5rem;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 
@@ -359,8 +365,7 @@
 
     .page-header.fixed &,
     .page-header--filled & {
-      
-        margin-top: -4.2rem;
+        margin-top: -4.5rem;
 
         @include breakpoint(mobile) {
             margin: 0;
@@ -1218,10 +1223,10 @@
         margin-bottom: 4px;
         transition: background-color 0.2s, transform 0.2s;
 
-
         .page-header.fixed &,
+        .page-header--dark &,
         .page-header--filled & {
-            background-color: #1D2734;
+            background-color: #1d2734;
         }
 
         &:last-child {
