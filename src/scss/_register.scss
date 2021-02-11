@@ -4,7 +4,7 @@
 
     @include breakpoint(mobile) {
         padding-top: 10rem;
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
     }
 }
 .register__row {
@@ -26,6 +26,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
         margin-bottom: 5rem;
+        display: none;
     }
 }
 
@@ -42,7 +43,12 @@
 .register__heading {
     margin-bottom: 3.5rem;
     @include breakpoint(mobile) {
-        margin-bottom: 2.5rem;
+       font-size: 1.6rem;
+       line-height: 2rem;
+       font-weight: 500;
+       padding-bottom: 2rem;
+       border-bottom: 1px solid #313131;
+       margin-bottom: 2.4rem;
     }
 }
 
@@ -251,6 +257,7 @@
         th {
             font-size: 1.4rem;
             line-height: 2rem;
+            font-weight: 500;
         }
 
         tr {

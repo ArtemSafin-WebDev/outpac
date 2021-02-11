@@ -628,7 +628,11 @@
 
 .page-header__cart {
     position: relative;
-    z-index: 90;
+   
+
+    @include breakpointMF(small-tablet) {
+        z-index: 90;
+    }
     &.active {
         .page-header__cart-dropdown {
             opacity: 1;

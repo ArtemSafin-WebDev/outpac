@@ -2050,8 +2050,10 @@ select:-webkit-autofill:focus {
         color: black; } }
 
 .page-header__cart {
-  position: relative;
-  z-index: 90; }
+  position: relative; }
+  @media only screen and (min-width: 641px) {
+    .page-header__cart {
+      z-index: 90; } }
   .page-header__cart.active .page-header__cart-dropdown {
     opacity: 1;
     visibility: inherit;
@@ -4792,7 +4794,7 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .register {
       padding-top: 10rem;
-      margin-bottom: 5rem; } }
+      margin-bottom: 7rem; } }
 
 .register__row {
   display: -webkit-box;
@@ -4824,7 +4826,8 @@ select:-webkit-autofill:focus {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
-      margin-bottom: 5rem; } }
+      margin-bottom: 5rem;
+      display: none; } }
 
 .register__right-col {
   width: 50%;
@@ -4842,7 +4845,12 @@ select:-webkit-autofill:focus {
   margin-bottom: 3.5rem; }
   @media only screen and (max-width: 640px) {
     .register__heading {
-      margin-bottom: 2.5rem; } }
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 500;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #313131;
+      margin-bottom: 2.4rem; } }
 
 .register__has-account-link {
   font-family: var(--sfui);
@@ -5028,7 +5036,8 @@ select:-webkit-autofill:focus {
     text-align: left; }
   .register__my-orders thead th {
     font-size: 1.4rem;
-    line-height: 2rem; }
+    line-height: 2rem;
+    font-weight: 500; }
   .register__my-orders thead tr {
     padding-bottom: 1.6rem;
     border-bottom: 1px solid #313131;
