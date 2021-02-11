@@ -10,7 +10,7 @@
 
 .checkout__row {
     display: flex;
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
         flex-direction: column;
     }
     
@@ -19,7 +19,7 @@
 .checkout__left-col {
     width: 50%;
     flex-grow: 1;
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
         width: 100%;
         margin-bottom: 7rem;
         display: contents;
@@ -32,7 +32,12 @@
     width: 48rem;
     margin-left: 16rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
+        margin-left: 5rem;
+        
+    }
+
+    @include breakpoint(small-tablet) {
         margin: 0;
         width: 100%;
         display: contents;
@@ -442,13 +447,13 @@
 .checkout__rules {
     margin-top: 6rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
         order: 10;
     }
 }
 
 .checkout__cart-wrapper {
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
         margin-top: 7rem;
     }
 }
