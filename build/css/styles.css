@@ -2050,7 +2050,8 @@ select:-webkit-autofill:focus {
         color: black; } }
 
 .page-header__cart {
-  position: relative; }
+  position: relative;
+  z-index: 90; }
   .page-header__cart.active .page-header__cart-dropdown {
     opacity: 1;
     visibility: inherit;
@@ -4822,7 +4823,8 @@ select:-webkit-autofill:focus {
           flex-wrap: wrap;
       -webkit-box-align: start;
           -ms-flex-align: start;
-              align-items: flex-start; } }
+              align-items: flex-start;
+      margin-bottom: 5rem; } }
 
 .register__right-col {
   width: 50%;
@@ -4840,7 +4842,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 3.5rem; }
   @media only screen and (max-width: 640px) {
     .register__heading {
-      margin-bottom: 3.5rem; } }
+      margin-bottom: 2.5rem; } }
 
 .register__has-account-link {
   font-family: var(--sfui);
@@ -4941,7 +4943,8 @@ select:-webkit-autofill:focus {
   margin-top: 6.2rem; }
   @media only screen and (max-width: 640px) {
     .register__account-nav {
-      margin: 0; } }
+      margin: 0;
+      width: 100%; } }
 
 .register__account-nav-list-item {
   margin-bottom: 4rem; }
@@ -4968,6 +4971,9 @@ select:-webkit-autofill:focus {
 
 .register__account-info {
   margin-bottom: 7.5rem; }
+  @media only screen and (max-width: 640px) {
+    .register__account-info {
+      margin-bottom: 3rem; } }
   .register__account-info table,
   .register__account-info thead,
   .register__account-info tbody,
@@ -4984,6 +4990,9 @@ select:-webkit-autofill:focus {
     font-family: var(--sfui);
     font-weight: 400;
     color: #313131; }
+  .register__account-info td {
+    text-transform: uppercase;
+    font-weight: 500; }
   .register__account-info tr {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4993,6 +5002,9 @@ select:-webkit-autofill:focus {
             align-items: baseline;
     padding: 2.4rem 0;
     border-bottom: 1px solid #efefef; }
+    @media only screen and (max-width: 640px) {
+      .register__account-info tr {
+        padding: 1.8rem 0; } }
 
 .register__my-orders {
   font-family: var(--sfui); }
@@ -5074,7 +5086,7 @@ select:-webkit-autofill:focus {
     fill: #1d2734;
     margin-left: 1.2rem;
     position: relative;
-    bottom: -.1rem; }
+    bottom: -0.1rem; }
   .register__my-orders-link:link, .register__my-orders-link:visited {
     color: #808080; }
   .register__my-orders-link:hover {

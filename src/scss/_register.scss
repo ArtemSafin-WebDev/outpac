@@ -25,14 +25,13 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        
+        margin-bottom: 5rem;
     }
 }
 
 .register__right-col {
     width: 50%;
     flex-grow: 1;
-
 
     @include breakpoint(mobile) {
         width: 100%;
@@ -42,9 +41,8 @@
 
 .register__heading {
     margin-bottom: 3.5rem;
-
     @include breakpoint(mobile) {
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -147,6 +145,7 @@
 
     @include breakpoint(mobile) {
         margin: 0;
+        width: 100%;
     }
 }
 
@@ -182,6 +181,10 @@
 
 .register__account-info {
     margin-bottom: 7.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
     table,
     thead,
     tbody,
@@ -202,17 +205,26 @@
         color: #313131;
     }
 
+    td {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
     tr {
         display: flex;
         align-items: baseline;
         padding: 2.4rem 0;
         border-bottom: 1px solid #efefef;
+
+        @include breakpoint(mobile) {
+            padding: 1.8rem 0;
+        }
     }
 }
 
 .register__my-orders {
     font-family: var(--sfui);
-    
+
     table,
     thead,
     tbody,
@@ -233,8 +245,6 @@
         color: #2a2a2a;
         font-weight: 400;
         text-align: left;
-
-      
     }
 
     thead {
@@ -306,7 +316,7 @@
         fill: #1d2734;
         margin-left: 1.2rem;
         position: relative;
-        bottom: -.1rem;
+        bottom: -0.1rem;
     }
     &:link,
     &:visited {
