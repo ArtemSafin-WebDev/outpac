@@ -231,6 +231,10 @@
 .register__my-orders {
     font-family: var(--sfui);
 
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
     table,
     thead,
     tbody,
@@ -282,6 +286,81 @@
                 font-weight: 500;
             }
         }
+    }
+}
+
+.register__my-orders-mobile-list-item {
+    border-bottom: 1px solid #EFEFEF;
+     
+    &:last-child {
+        border: none;
+    }
+}
+
+.register__my-orders-mobile {
+    display: block;
+    margin-top: -2.4rem;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.register__my-orders-mobile-card {
+    display: flex;
+    align-items: center;
+    padding: 2.4rem 0;
+  
+}
+
+.register__my-orders-mobile-card-status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #EFEFEF;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+
+    &--delivered {
+        background-color: #60EC00;
+    }
+}
+
+.register__my-orders-mobile-card-image-container {
+    width: 7rem;
+    height: 8rem;
+    position: relative;
+    margin-right: 2.4rem;
+}
+
+.register__my-orders-mobile-card-content {
+    width: 50%;
+    flex-grow: 1;
+    position: relative;
+    padding-right: 3rem;
+}
+
+.register__my-orders-mobile-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.register__my-orders-mobile-card-title,
+.register__my-orders-mobile-card-date,
+.register__my-orders-mobile-card-price {
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+    margin-right: 2.4rem;
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
