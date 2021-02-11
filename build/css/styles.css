@@ -4788,26 +4788,59 @@ select:-webkit-autofill:focus {
 .register {
   padding-top: 23rem;
   margin-bottom: 20rem; }
+  @media only screen and (max-width: 640px) {
+    .register {
+      padding-top: 10rem;
+      margin-bottom: 5rem; } }
 
 .register__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 640px) {
+    .register__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .register__left-col {
   width: 34rem;
   margin-right: 5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
+  @media only screen and (max-width: 640px) {
+    .register__left-col {
+      width: 100%;
+      margin: 0;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 .register__right-col {
   width: 50%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 640px) {
+    .register__right-col {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
 
 .register__heading {
   margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .register__heading {
+      margin-bottom: 3.5rem; } }
 
 .register__has-account-link {
   font-family: var(--sfui);
@@ -4817,6 +4850,9 @@ select:-webkit-autofill:focus {
   border-bottom: 1px solid #808080;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s; }
+  @media only screen and (max-width: 640px) {
+    .register__has-account-link {
+      margin-left: auto; } }
   .register__has-account-link:link, .register__has-account-link:visited {
     color: #808080; }
   .register__has-account-link:hover {
@@ -4830,13 +4866,26 @@ select:-webkit-autofill:focus {
       flex-wrap: wrap;
   margin: -0.8rem -1.6rem;
   margin-bottom: 3.4rem; }
+  @media only screen and (max-width: 640px) {
+    .register__form-row {
+      margin-bottom: 3rem; } }
 
 .register__form-col {
   width: 50%;
   padding: 0.8rem 1.6rem; }
+  @media only screen and (max-width: 640px) {
+    .register__form-col {
+      width: 100%; } }
 
 .register__submit {
   margin-left: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .register__submit {
+      margin-left: 0; } }
+
+@media only screen and (max-width: 640px) {
+  .register__subscription-checkbox {
+    margin-bottom: 3rem; } }
 
 .register__btns {
   display: -webkit-box;
@@ -4850,6 +4899,19 @@ select:-webkit-autofill:focus {
           justify-content: space-between;
   padding-top: 2.4rem;
   border-top: 1px solid #e7e7e7; }
+  @media only screen and (max-width: 640px) {
+    .register__btns {
+      padding-top: 3rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
 
 .register__forgot-password {
   font-family: var(--sfui);
@@ -4857,6 +4919,9 @@ select:-webkit-autofill:focus {
   font-size: 1.4rem;
   line-height: 1.2;
   color: #313131; }
+  @media only screen and (max-width: 640px) {
+    .register__forgot-password {
+      margin-bottom: 3rem; } }
   .register__forgot-password:link, .register__forgot-password:visited {
     color: #313131; }
   .register__forgot-password:hover {
@@ -4874,11 +4939,17 @@ select:-webkit-autofill:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 6.2rem; }
+  @media only screen and (max-width: 640px) {
+    .register__account-nav {
+      margin: 0; } }
 
 .register__account-nav-list-item {
   margin-bottom: 4rem; }
   .register__account-nav-list-item:last-child {
     margin-bottom: 0; }
+  @media only screen and (max-width: 640px) {
+    .register__account-nav-list-item {
+      margin-bottom: 2rem; } }
 
 .register__account-nav-link {
   color: #313131;
@@ -5015,6 +5086,10 @@ select:-webkit-autofill:focus {
   font-size: 1.8rem;
   line-height: 2rem;
   color: #313131; }
+  @media only screen and (max-width: 640px) {
+    .account-heading {
+      font-size: 1.6rem;
+      line-height: 2rem; } }
 
 .account-input-wrapper {
   position: relative; }

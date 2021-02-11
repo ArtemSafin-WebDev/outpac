@@ -1,24 +1,51 @@
 .register {
     padding-top: 23rem;
     margin-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 10rem;
+        margin-bottom: 5rem;
+    }
 }
 .register__row {
     display: flex;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
 }
 
 .register__left-col {
     width: 34rem;
     margin-right: 5rem;
     flex-shrink: 0;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        
+    }
 }
 
 .register__right-col {
     width: 50%;
     flex-grow: 1;
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .register__heading {
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
 }
 
 .register__has-account-link {
@@ -28,6 +55,10 @@
     line-height: 2rem;
     border-bottom: 1px solid #808080;
     transition: border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        margin-left: auto;
+    }
 
     &:link,
     &:visited {
@@ -44,15 +75,33 @@
     flex-wrap: wrap;
     margin: -0.8rem -1.6rem;
     margin-bottom: 3.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .register__form-col {
     width: 50%;
     padding: 0.8rem 1.6rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .register__submit {
     margin-left: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}
+
+.register__subscription-checkbox {
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .register__btns {
@@ -61,6 +110,13 @@
     justify-content: space-between;
     padding-top: 2.4rem;
     border-top: 1px solid #e7e7e7;
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+    }
 }
 
 .register__forgot-password {
@@ -69,6 +125,10 @@
     font-size: 1.4rem;
     line-height: 1.2;
     color: #313131;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
     &:link,
     &:visited {
         color: #313131;
@@ -84,12 +144,20 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 6.2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 
 .register__account-nav-list-item {
     margin-bottom: 4rem;
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
     }
 }
 

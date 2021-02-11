@@ -6,6 +6,11 @@
     font-size: 1.8rem;
     line-height: 2rem;
     color: #313131;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
 }
 
 .account-input-wrapper {
