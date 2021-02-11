@@ -141,17 +141,31 @@
 
 .account-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    margin: -.8rem -1.6rem;
 }
 
 .account-list-item {
-    margin-bottom: 1.2rem;
-    padding-left: 2.5rem;
-    position: relative;
-    font-family: var(--sfui);
+   
+   
+ 
+    width: 50%;
+    padding: .8rem 1.6rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+    
+  
+}
+
+.account-list-card {
     font-size: 1.2rem;
     line-height: 2rem;
     color: #323232;
+    padding-left: 2.5rem;
+    position: relative;
+    font-family: var(--sfui);
     &::before {
         content: '';
         position: absolute;
@@ -164,9 +178,6 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-    }
-    &:last-child {
-        margin-bottom: 0;
     }
 }
 
