@@ -43,12 +43,12 @@
 .register__heading {
     margin-bottom: 3.5rem;
     @include breakpoint(mobile) {
-       font-size: 1.6rem;
-       line-height: 2rem;
-       font-weight: 500;
-       padding-bottom: 2rem;
-       border-bottom: 1px solid #313131;
-       margin-bottom: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 500;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #313131;
+        margin-bottom: 2.4rem;
     }
 }
 
@@ -255,7 +255,11 @@
         color: #2a2a2a;
         font-weight: 400;
         text-align: left;
+
+      
     }
+
+  
 
     thead {
         th {
@@ -278,27 +282,65 @@
             display: flex;
             padding: 4.5rem 0;
             border-bottom: 1px solid #efefef;
+            align-items: center;
         }
 
         td {
-            &:nth-child(3),
-            &:nth-child(4) {
-                font-weight: 500;
+            .register__my-orders:not(.register__my-orders--order) & {
+                &:nth-child(3),
+                &:nth-child(4) {
+                    font-weight: 500;
+                }
             }
+        }
+    }
+
+    &--order {
+        th,
+        td {
+            width: 10%;
+            flex-grow: 1;
+            &:nth-child(1) {
+                width: 22%;
+                flex-grow: 1;
+            }
+           
+            &:nth-child(6) {
+                width: 14rem;
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+        }
+
+        tbody tr {
+            padding: 3.2rem 0;
         }
     }
 }
 
 .register__my-orders-mobile-list-item {
-    border-bottom: 1px solid #EFEFEF;
-     
+    border-bottom: 1px solid #efefef;
+
     &:last-child {
+        border-bottom: none;
+    }
+
+    &--order {
         border: none;
+        margin-bottom: 5rem;
+        border-top: 1px solid #efefef;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
     }
 }
 
 .register__my-orders-mobile {
-    display: block;
+    display: none;
     margin-top: -2.4rem;
     @include breakpoint(mobile) {
         display: block;
@@ -309,7 +351,11 @@
     display: flex;
     align-items: center;
     padding: 2.4rem 0;
-  
+
+    &--separate {
+        padding: 0;
+        
+    }
 }
 
 .register__my-orders-mobile-card-status {
@@ -318,12 +364,12 @@
     top: 0;
     width: 1.6rem;
     height: 1.6rem;
-    border: 1px solid #EFEFEF;
-    background-color: #F6F6F6;
+    border: 1px solid #efefef;
+    background-color: #f6f6f6;
     border-radius: 50%;
 
     &--delivered {
-        background-color: #60EC00;
+        background-color: #60ec00;
     }
 }
 
@@ -411,5 +457,99 @@
 
     &:hover {
         color: black;
+    }
+}
+
+.register__my-orders-return-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    flex-shrink: 0;
+    padding: 1.3rem 1.6rem;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    transition: background-color .2s, color .2s, border-color .2s;
+
+    .no-touch &:hover {
+        background-color: black;
+        border-color: black;
+        color: white;
+    }
+}
+
+
+.register__rules {
+    margin-top: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 5rem;
+    }
+}
+
+.register__heading-back-link {
+    margin-left: -2.4rem;
+    padding-left: 2.4rem;
+    position: relative;
+
+    svg {
+        width: 0.8rem;
+        height: 1.2rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: #AEB4BB;
+
+
+    }
+
+    @include breakpoint(mobile) {
+        svg {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.register__my-orders-mobile-info-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #313131;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 2.4rem 0;
+
+    &:first-child {
+        border-top: 1px solid #EFEFEF;
+    }
+
+    
+}
+
+.register__my-orders-mobile-info-item-value {
+    text-align: right;
+}
+
+.register__my-orders-mobile-make-return {
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    padding: 1.7rem 2.4rem;
+    background-color: #000;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    font-family: var(--sfui);
+    display: block;
+    width: 100%;
+    margin-top: 3.2rem;
+    &:link,
+    &:visited {
+        color: white;
     }
 }
