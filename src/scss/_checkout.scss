@@ -13,7 +13,6 @@
     @include breakpoint(small-tablet) {
         flex-direction: column;
     }
-    
 }
 
 .checkout__left-col {
@@ -27,14 +26,11 @@
 }
 
 .checkout__right-col {
-   
-
     width: 48rem;
     margin-left: 16rem;
 
     @include breakpoint(tablet) {
         margin-left: 5rem;
-        
     }
 
     @include breakpoint(small-tablet) {
@@ -48,12 +44,9 @@
     margin-top: 4.8rem;
 
     @include breakpoint(mobile) {
-       
         margin-top: 4rem;
     }
 }
-
-
 
 .checkout__cart-list {
     border-top: 1px solid black;
@@ -138,7 +131,6 @@
 }
 
 .checkout__cart-totals {
-    
 }
 
 .checkout__cart-totals-item {
@@ -166,14 +158,11 @@
     color: #313131;
 }
 
-
-
 .checkout__status {
     margin-bottom: 6rem;
 }
 
 .checkout__status-stages-names {
-
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -202,7 +191,6 @@
     }
 }
 
-
 .checkout__status-indicators {
     display: flex;
     align-items: center;
@@ -213,12 +201,32 @@
     height: 1.4rem;
     border-radius: 50%;
     flex-shrink: 0;
-    border: 1px solid #AEB4BB;
+    border: 1px solid #aeb4bb;
     background-color: #fff;
+    position: relative;
 
     &--filled {
         border-color: black;
         background-color: black;
+    }
+
+    &--passed {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            z-index: 20;
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.93 8.3'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M11.63.3a1,1,0,0,0-1.42,0h0L4.59,5.93l-3-2.63a1,1,0,0,0-1.4.21,1,1,0,0,0,0,1.21L3.92,8A1,1,0,0,0,5.33,8l.14-.16.16-.13,6-6a1,1,0,0,0,0-1.42Z' /%3E%3C/svg%3E");
+            background-position: center;
+            background-size: 1.2rem 0.8rem;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -226,7 +234,7 @@
     width: 50%;
     flex-grow: 1;
     height: 1px;
-    background-color: #AEB4BB;
+    background-color: #aeb4bb;
 
     &--filled {
         background-color: #000;
@@ -260,8 +268,6 @@
     border-bottom: 1px solid #808080;
     transition: border-color 0.2s;
 
-    
-
     &:link,
     &:visited {
         color: #808080;
@@ -275,15 +281,13 @@
 .checkout__form-delivery-row {
     display: flex;
     flex-wrap: wrap;
-    margin: -.8rem -1.6rem;
+    margin: -0.8rem -1.6rem;
 }
 
 .checkout__form-user-info-col,
 .checkout__form-delivery-col {
     width: 50%;
-    padding: .8rem 1.6rem;
-
-    
+    padding: 0.8rem 1.6rem;
 
     &--fullwidth {
         width: 100%;
@@ -301,16 +305,14 @@
     @include breakpoint(mobile) {
         width: 100%;
     }
-
-  
 }
 
 .checkout__form-delivery-inner-row {
     display: flex;
     flex-wrap: wrap;
-    margin: -.8rem;
+    margin: -0.8rem;
     @include breakpoint(mobile) {
-        margin: -.8rem -1.6rem;
+        margin: -0.8rem -1.6rem;
     }
 }
 
@@ -320,13 +322,13 @@
 
     @include breakpoint(mobile) {
         width: 50%;
-        padding: .8rem 1.6rem;
+        padding: 0.8rem 1.6rem;
     }
 }
 
 .checkout__use-promo {
     padding-top: 3.2rem;
-   
+
     border-top: 1px solid #efefef;
     margin-top: 2rem;
 }
@@ -334,7 +336,6 @@
 .checkout__use-promo-checkbox {
     margin-bottom: 3.2rem;
 }
-
 
 .checkout__form-delivery-checkbox {
     user-select: none;
@@ -346,13 +347,13 @@
 }
 
 .checkout__form-delivery-checkbox-content {
-    border: 1px solid #EFEFEF;
+    border: 1px solid #efefef;
     min-height: 11rem;
     padding: 1.6rem;
     display: flex;
     flex-direction: column;
     font-family: var(--sfui);
-    transition: border-color .2s;
+    transition: border-color 0.2s;
 }
 
 .checkout__form-delivery-checkbox-content-type {
@@ -362,7 +363,7 @@
     font-size: 1.4rem;
     line-height: 2rem;
     margin-bottom: 2rem;
-    transition: color .2s;
+    transition: color 0.2s;
 }
 
 .checkout__form-delivery-checkbox-mark {
@@ -375,9 +376,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
     border-radius: 50%;
-  
+
     &::before {
         content: '';
         display: block;
@@ -385,7 +386,7 @@
         height: 1rem;
         background-color: #000;
         pointer-events: none;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         opacity: 0;
         border-radius: 50%;
     }
@@ -398,9 +399,8 @@
     line-height: 2rem;
     text-transform: uppercase;
     padding-left: 2.8rem;
-    transition: color .2s;
+    transition: color 0.2s;
 }
-
 
 .checkout__form-delivery-checkbox-input:checked ~ .checkout__form-delivery-checkbox-content {
     border-color: black;
@@ -413,8 +413,6 @@
     .checkout__form-delivery-checkbox-content-address {
         color: black;
     }
-
-    
 }
 
 .checkout__form-submit-wrapper {
@@ -455,5 +453,118 @@
 .checkout__cart-wrapper {
     @include breakpoint(small-tablet) {
         margin-top: 7rem;
+    }
+}
+
+.checkout__form-delivery {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.checkout__form-back-link {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    color: #808080;
+    margin-right: auto;
+    &:link,
+    &:visited {
+        color: #808080;
+    }
+
+    .no-touch &:hover {
+        color: black;
+    }
+    svg {
+        width: 0.6rem;
+        height: 1.2rem;
+        flex-shrink: 0;
+        fill: #1D2734;
+        margin-right: 1rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.checkout__form-payment-checkbox {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.checkout__form-payment-checkbox-content {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    min-height: 6.4rem;
+    border: 1px solid #efefef;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: var(--sfui);
+    color: #808080;
+    transition: color .2s, border-color .2s;
+}
+
+.checkout__form-payment-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid black;
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    border-radius: 50%;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: #000;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.checkout__form-payment-checkbox-text {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.checkout__form-payment-checkbox-image {
+    height: 3rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.checkout__form-payment-checkbox-input {
+    @include visuallyHidden();
+}
+
+.checkout__form-payment-checkbox-input:checked ~ .checkout__form-payment-checkbox-content {
+    border-color: black;
+    color: black;
+
+    .checkout__form-payment-checkbox-mark::before {
+        opacity: 1;
+    }
+}
+
+.checkout__form-payment {
+    margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
     }
 }
