@@ -473,8 +473,8 @@
     transition: background-color .2s, color .2s, border-color .2s;
 
     .no-touch &:hover {
-        background-color: black;
-        border-color: black;
+        background-color: #181818;
+        border-color: #181818;
         color: white;
     }
 }
@@ -540,7 +540,7 @@
     font-size: 1.4rem;
     line-height: 1.2rem;
     padding: 1.7rem 2.4rem;
-    background-color: #000;
+    background-color: #181818;
     color: white;
     font-weight: 500;
     text-align: center;
@@ -552,4 +552,81 @@
     &:visited {
         color: white;
     }
+}
+
+.register__return {
+    max-width: 90rem;
+}
+
+.register__return-row {
+    margin-bottom: 6rem;
+}
+
+.register__return-heading {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    font-family: var(--sfui);
+    margin-bottom: 4rem;
+}
+
+.register__return-product {
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #EFEFEF;
+}
+
+
+
+.register__return-product-only-mobile {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.register__return-datetime {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+   
+}
+
+.register__return-datetime-col {
+    margin-right: 1.6rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        margin-bottom: 1.6rem;
+    }
+    
+}
+
+.register__return-submit {
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    padding: 1.7rem 3.6rem;
+    background-color: #181818;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    font-family: var(--sfui);
+    display: inline-flex;
+    text-align: center;
+    align-self: flex-start;
+    @include breakpoint(mobile) {
+        display: block;
+        width: 100%;
+    }
+    
+}
+
+.register__return-datetime-remark {
+    font-family: var(--sfui);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #808080;
+    max-width: 28rem;
+    margin-top: 0.6rem;
 }

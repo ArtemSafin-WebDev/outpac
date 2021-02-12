@@ -1,5 +1,3 @@
-
-
 .account-heading {
     font-family: var(--sfui);
     font-weight: 500;
@@ -26,13 +24,13 @@
     .parsley-errors-list.filled {
         font-family: var(--sfui);
         font-size: 1.2rem;
-        color: #FF3203;
+        color: #ff3203;
         margin-top: 0.5rem;
     }
 }
 
 .account-label {
-    transition: transform .3s;
+    transition: transform 0.3s;
     position: absolute;
     left: 1.8rem;
     font-size: 1.4rem;
@@ -45,8 +43,8 @@
 }
 
 .account-input {
-    border: 1px solid #E7E7E7;
-   
+    border: 1px solid #e7e7e7;
+
     font-family: var(--sfui);
     font-size: 1.4rem;
     padding: 0 1.8rem;
@@ -54,13 +52,13 @@
     padding-bottom: 0.8rem;
     display: block;
     width: 100%;
-    transition: border-color .3s;
+    transition: border-color 0.3s;
     &:focus {
         border-color: black;
     }
 
     &.parsley-error {
-        border-color: #FF3203;
+        border-color: #ff3203;
     }
 
     @include placeholder {
@@ -72,16 +70,13 @@
 .account-input:not(:placeholder-shown) ~ .account-label,
 .account-input:-webkit-autofill ~ .account-label {
     transform: scale(0.8) translateY(-1rem);
-}   
-
+}
 
 .account-checkbox {
     user-select: none;
     cursor: pointer;
     display: flex;
     align-items: flex-start;
-
-    
 }
 
 .account-checkbox-input {
@@ -98,7 +93,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
     &::before {
         content: '';
         display: block;
@@ -106,12 +101,12 @@
         height: 0.8rem;
         background-color: #000;
         pointer-events: none;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         opacity: 0;
     }
 
     .parsley-error & {
-        border-color: #FF3203;
+        border-color: #ff3203;
     }
 
     &--radio {
@@ -129,16 +124,14 @@
     line-height: 1.2;
 }
 
-
 .account-checkbox-input:checked ~ .account-checkbox-mark::before {
     opacity: 1;
 }
 
-
 .account-address-row {
     display: flex;
     flex-wrap: wrap;
-    margin: -.8rem;
+    margin: -0.8rem;
 }
 
 .account-address-col {
@@ -149,21 +142,16 @@
 .account-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -.8rem -1.6rem;
+    margin: -0.8rem -1.6rem;
 }
 
 .account-list-item {
-   
-   
- 
     width: 50%;
-    padding: .8rem 1.6rem;
+    padding: 0.8rem 1.6rem;
 
     @include breakpoint(mobile) {
         width: 100%;
     }
-    
-  
 }
 
 .account-list-card {
@@ -177,7 +165,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: .35rem;
+        top: 0.35rem;
 
         background-image: url('../img/checkmark.svg');
         width: 1.2rem;
@@ -197,15 +185,182 @@
     color: white;
     text-align: center;
     flex-shrink: 0;
-  
+
     font-family: var(--sfui);
     font-size: 1.4rem;
     line-height: 1.2;
-  
+
     font-weight: 500;
 
     &:link,
     &:visited {
         color: white;
+    }
+}
+
+.account-select {
+    text-align: left;
+
+    .parsley-errors-list.filled {
+        font-family: var(--sfui);
+        font-size: 1.2rem;
+        color: #ff3203;
+        margin-top: 0.5rem;
+    }
+    
+    .choices {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-family: var(--sfui);
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0.5rem;
+    }
+
+    .choices__inner {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding: 0.5rem 1.8rem;
+        border: 1px solid #e2e2e2;
+        min-height: 5.4rem;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border-radius: 0;
+        transition: border-color .2s;
+       
+    }
+
+    &.parsley-error {
+        .choices__inner {
+            border-color: #ff3203;
+        }
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 1.8rem;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 1.8rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d2734;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M2,5.72a1.31,1.31,0,0,1-1.61,0A.91.91,0,0,1,.24,4.39a.57.57,0,0,1,.11-.11L5.2.28a1.29,1.29,0,0,1,1.6,0l4.85,4a.92.92,0,0,1,.11,1.34l-.11.1a1.31,1.31,0,0,1-1.61,0L6,2.39Z'/%3E%3C/svg%3E");
+        width: 1.2rem;
+        height: 0.6rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: 1px solid #e2e2e2;
+        border-top: none;
+        background: white;
+        border-radius: 0 !important;
+
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        padding: 1rem 1.8rem;
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: black;
+        color: white;
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 20rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 15rem;
+        }
+    }
+
+    select {
+        @include breakpoint(mobile) {
+            border: none;
+            outline: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            font: inherit;
+            display: block;
+            width: 100%;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            padding: 0.5rem 1.6rem;
+            border: 1px solid #e2e2e2;
+            font-family: var(--sfui);
+            font-weight: 500;
+            min-height: 5.4rem;
+            display: flex;
+            align-items: center;
+            background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %231d2734; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M6,3.61,10,.28a1.31,1.31,0,0,1,1.61,0l.11.1,0,0a.91.91,0,0,1-.15,1.29l-4.85,4a1.29,1.29,0,0,1-1.6,0l-4.85-4a.57.57,0,0,1-.11-.11l0-.06A.91.91,0,0,1,.39.28,1.31,1.31,0,0,1,2,.28Z' /%3E%3C/svg%3E");
+            background-size: 1.2rem .6rem;
+            background-position: right 1.6rem center;
+            background-repeat: no-repeat;
+
+           
+        }
+    }
+
+    &.parsley-error {
+        @include breakpoint(mobile) {
+            select {
+                border-color: #ff3203;
+            }
+        }
+       
     }
 }

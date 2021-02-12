@@ -1,5 +1,10 @@
 import 'parsleyjs';
 
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
+dayjs.extend(customParseFormat)
+
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
     validateString: function(value) {
@@ -11,7 +16,34 @@ window.Parsley.addValidator('phone', {
     }
 });
 
-
+window.Parsley.addValidator('date', {
+    requirementType: 'string',
+    validateString: function(value) {
+        console.log('Validating date', {
+            value,
+            valid: dayjs(value, 'DD.MM.YYYY', true).isValid()
+        })
+        return dayjs(value, 'DD.MM.YYYY', true).isValid()
+    },
+    messages: {
+        en: 'Enter correct date',
+        ru: 'Введите правильно дату'
+    }
+});
+window.Parsley.addValidator('time', {
+    requirementType: 'string',
+    validateString: function(value) {
+        console.log('Validating time', {
+            value,
+            valid: dayjs(value, 'HH:mm', true).isValid()
+        })
+        return dayjs(value, 'HH:mm', true).isValid()
+    },
+    messages: {
+        en: 'Enter correct time',
+        ru: 'Введите правильно время'
+    }
+});
 
 window.Parsley.addValidator('requiredIfChecked', {
     requirementType: 'string',

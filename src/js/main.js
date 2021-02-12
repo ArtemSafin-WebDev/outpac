@@ -16,6 +16,7 @@ import cartDropdown from './cartDropdown';
 import deliveryInfo from './deliveryInfo';
 import stickyProduct from './stickyProduct';
 import recommendedSlider from './recommendedSlider';
+import timeMask from './timeMask';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     deliveryInfo();
     stickyProduct();
     recommendedSlider();
+    timeMask();
 });
 
 window.addEventListener('load', function() {
