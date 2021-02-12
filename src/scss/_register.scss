@@ -630,3 +630,125 @@
     max-width: 28rem;
     margin-top: 0.6rem;
 }
+
+.register__return-next-steps {
+    max-width: 90rem;
+    margin-top: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 6rem;
+    }
+}
+
+.register__return-next-steps-heading {
+    font-family: var(--sfui);
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: #313131;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.register__return-next-steps-item {
+    margin-bottom: 3.2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 5.2rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.register__return-next-steps-card {
+    padding: 3.2rem 4rem;
+    background-color: #F5F5F5;
+    border-radius: 1.2rem;
+    display: flex;
+    font-family: var(--sfui);
+
+    @include breakpoint(mobile) {
+        padding: 3.5rem 2.4rem;
+        display: flex;
+        flex-direction: column;
+    }
+  
+}
+
+.register__return-next-steps-card-icon-container {
+    width: 9.4rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin-bottom: 4rem;
+    }
+
+    .icon-doc {
+        width: 5rem;
+        height: 6rem;
+        flex-shrink: 0;
+        fill: #111111;
+        display: block;
+    }
+
+    .icon-box {
+        width: 6rem;
+        height: 5.8rem;
+        fill: #111111;
+        display: block;
+        flex-shrink: 0;
+    }
+}
+
+.register__return-next-steps-card-content {
+    width: 40%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.register__return-next-steps-card-title {
+    color: #313131;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.register__return-next-steps-card-text {
+    color: #323232;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.register__return-next-steps-card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem 1.6rem;
+    font-weight: 500;
+    font-family: var(--montserrat);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    border: 1px solid #E2E2E2;
+    background-color: #fff;
+    color: black;
+    flex-shrink: 0;
+    align-self: flex-start;
+    &:link,
+    &:visited {
+        color: black;
+    }
+}

@@ -47,6 +47,10 @@
     border: 1px dashed #979797;
     border-radius: 1.2rem;
 
+    &--return {
+        margin: 0;
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
         max-width: none;
@@ -91,6 +95,9 @@
     position: relative;
     border-bottom: 1px dashed #979797;
     margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 
     em {
         font-style: normal;
@@ -240,6 +247,26 @@
         padding: 1.6rem;
         flex-wrap: wrap;
         align-items: initial;
+        padding: 0;
+        border: none;
+        background: transparent;
+        color: black;
+    }
+
+    .icon-gift-thick {
+        display: none;
+        @include breakpoint(mobile) {
+            display: block;
+            position: static;
+            transform: none;
+            margin: 0;
+            fill: black;
+            width: 3rem;
+            height: 3rem;
+            flex-shrink: 0;
+            margin-right: 2.2rem;
+            align-self: center;
+        }
     }
     .icon-gift {
         position: absolute;
@@ -252,9 +279,7 @@
         margin-right: 3.6rem;
 
         @include breakpoint(mobile) {
-            position: static;
-            transform: none;
-            margin-bottom: 2rem;
+            display: none;
         }
     }
 }
@@ -279,9 +304,8 @@
     font-weight: 500;
 
     @include breakpoint(mobile) {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 2rem;
+        display: none;
+
         br {
             display: none;
         }
@@ -292,6 +316,31 @@
         &:link,
         &:visited {
             color: inherit;
+        }
+
+        .no-touch &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.finished__gift-content-mobile {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #313131;
+    width: 30%;
+    flex-grow: 1;
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+    a {
+        border-bottom: 1px solid currentColor;
+        transition: color 0.2s, border-color 0.2s;
+        &:link,
+        &:visited {
+            color: #808080;
         }
 
         .no-touch &:hover {
@@ -317,5 +366,6 @@
 
     @include breakpoint(mobile) {
         width: 100%;
+        margin-top: 2.5rem;
     }
 }

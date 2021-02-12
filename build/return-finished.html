@@ -534,254 +534,107 @@
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
                             <use xlink:href="#arrow-left"></use>
                         </svg>
-                        Возврат
+                        Подтверждение возврата
                     </a>
                 </h2>
-                <form class="register__return" method="POST" action="/" data-need-validation>
-                    <div class="register__return-row">
-                        <h3 class="register__return-heading">
-                            1. Товар на возврат
-                        </h3>
-                        <div class="register__return-product">
-                            <a href="#" class="register__my-orders-mobile-card">
-                                <div class="register__my-orders-mobile-card-image-container">
-                                    <img src="img/checkout/cart-1.jpg" alt=""
-                                        class="register__my-orders-mobile-card-image">
-                                </div>
-                                <div class="register__my-orders-mobile-card-content">
-                                    <h4 class="register__my-orders-mobile-card-title">
-                                        Nike Air Max 98
-                                    </h4>
-                                    <div class="register__my-orders-mobile-card-date">
-                                        20.10.2020
-                                    </div>
-                                    <div class="register__my-orders-mobile-card-price">
-                                        14 290 P
-                                    </div>
-                                    <div
-                                        class="register__my-orders-mobile-card-status register__my-orders-mobile-card-status--delivered">
 
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="register__return-product-only-mobile">
-                                <div class="register__my-orders-mobile-info">
-                                    <div class="register__my-orders-mobile-info-item">
-                                        <div class="register__my-orders-mobile-info-item-key">
-                                            Артикул
-                                        </div>
-                                        <div class="register__my-orders-mobile-info-item-value">
-                                            14635673
-                                        </div>
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item">
-                                        <div class="register__my-orders-mobile-info-item-key">
-                                            Дата доставки
-                                        </div>
-                                        <div class="register__my-orders-mobile-info-item-value">
-                                            23.08.2020
-                                        </div>
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item">
-                                        <div class="register__my-orders-mobile-info-item-key">
-                                            Статус
-                                        </div>
-                                        <div class="register__my-orders-mobile-info-item-value">
-                                            Заказ доставлен
-                                        </div>
-                                    </div>
-                                    <div class="register__my-orders-mobile-info-item">
-                                        <div class="register__my-orders-mobile-info-item-key">
-                                            Цена
-                                        </div>
-                                        <div class="register__my-orders-mobile-info-item-value">
-                                            14 290 P
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="register__return-row">
-                        <h3 class="register__return-heading">
-                            2. Причина возврата
-                        </h3>
+                <div class="finished__content finished__content--return">
 
 
-                        <div class="checkout__form-user-info-row">
-                            <div class="checkout__form-user-info-col">
-                                <div class="account-select" id="reason-errors">
-                                    <select name="reason" id="reason" class="js-custom-select" required
-                                        data-parsley-errors-container="#reason-errors"
-                                        data-parsley-class-handler="#reason-errors" data-parsley-trigger="change">
-                                        <option value="" placeholder>Выберите причину возврата</option>
-                                        <option value="1">Причина 1</option>
-                                        <option value="2">Причина 2</option>
-                                        <option value="3">Причина 3</option>
-                                    </select>
-                                </div>
-                            </div>
+                    <h1 class="finished__heading">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-finished-checkmark">
+                            <use xlink:href="#finished-checkmark"></use>
+                        </svg>
+                        Ваш возврат успешно оформлен!
+                    </h1>
+                    <div class="finished__text">
+                        <p>
+                            Номер возврата: <em>46324622</em>
+                        </p>
+                        <p>
+                            Вы получите подтверждение на электронную почту
 
-                        </div>
-                    </div>
-                    <div class="register__return-row">
-                        <h3 class="register__return-heading">
-                            3. Адрес отправки
-                        </h3>
-
-
-                        <div class="checkout__form-delivery-row">
-                            <div class="checkout__form-delivery-col checkout__form-delivery-col--address-checkbox">
-                                <label class="checkout__form-delivery-checkbox">
-                                    <input type="radio" name="delivery" class="checkout__form-delivery-checkbox-input"
-                                        checked>
-                                    <span class="checkout__form-delivery-checkbox-content">
-                                        <span class="checkout__form-delivery-checkbox-content-type">
-                                            <span class="checkout__form-delivery-checkbox-mark">
-
-                                            </span>
-                                            <span class="checkout__form-delivery-checkbox-content-type-text">
-                                                Дом
-                                            </span>
-                                        </span>
-                                        <span class="checkout__form-delivery-checkbox-content-address">
-                                            Казань, Некрасова 9 / 34
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="checkout__form-delivery-col checkout__form-delivery-col--address-checkbox">
-                                <label class="checkout__form-delivery-checkbox">
-                                    <input type="radio" name="delivery" class="checkout__form-delivery-checkbox-input">
-                                    <span class="checkout__form-delivery-checkbox-content">
-                                        <span class="checkout__form-delivery-checkbox-content-type">
-                                            <span class="checkout__form-delivery-checkbox-mark">
-
-                                            </span>
-                                            <span class="checkout__form-delivery-checkbox-content-type-text">
-                                                Работа
-                                            </span>
-                                        </span>
-                                        <span class="checkout__form-delivery-checkbox-content-address">
-                                            Казань, фучика 3
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input" id="country" required placeholder="Страна"
-                                        value="Россия">
-                                    <label class="account-label" for="country">
-                                        Страна
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input" id="city" required placeholder="Город"
-                                        value="Казань">
-                                    <label class="account-label" for="city">
-                                        Город
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input" id="region" required placeholder="Область"
-                                        value="Республика Татарстан">
-                                    <label class="account-label" for="region">
-                                        Область
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input" id="street" required placeholder="Улица"
-                                        value="Некрасова">
-                                    <label class="account-label" for="street">
-                                        Улица
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input" id="index" required placeholder="Индекс"
-                                        value="">
-                                    <label class="account-label" for="index">
-                                        Индекс
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkout__form-delivery-col">
-                                <div class="checkout__form-delivery-inner-row">
-                                    <div class="checkout__form-delivery-inner-col">
-                                        <div class="account-input-wrapper">
-                                            <input type="text" class="account-input" id="building" required
-                                                placeholder="Дом" value="9">
-                                            <label class="account-label" for="building">
-                                                Дом
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="checkout__form-delivery-inner-col">
-                                        <div class="account-input-wrapper">
-                                            <input type="text" class="account-input" id="flat" required
-                                                placeholder="Квартира*">
-                                            <label class="account-label" for="flat">
-                                                Квартира*
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="checkout__form-delivery-inner-col">
-                                        <div class="account-input-wrapper">
-                                            <input type="text" class="account-input" id="section" required
-                                                placeholder="Корпус*">
-                                            <label class="account-label" for="section">
-                                                Корпус*
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        </p>
                     </div>
 
-                    <div class="register__return-row">
-                        <h3 class="register__return-heading">
-                            4. Дата и время передачи
-                        </h3>
-
-                        <div class="register__return-datetime">
-                            <div class="register__return-datetime-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input js-date-input" id="date" required
-                                        placeholder="Дата" required data-parsley-date>
-                                    <label class="account-label" for="date">
-                                        Дата
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="register__return-datetime-col">
-                                <div class="account-input-wrapper">
-                                    <input type="text" class="account-input js-time-input" id="date" required
-                                        placeholder="Время" required data-parsley-time>
-                                    <label class="account-label" for="date">
-                                        Время
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="register__return-datetime-remark">
-                                *Выберите дату и время, когда вы сможете
-                                передать посылку курьеру
-                            </div>
+                    <div class="finished__gift">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-gift">
+                            <use xlink:href="#gift"></use>
+                        </svg>
+                        <svg width="16" height="16" aria-hidden="true" class="icon-gift-thick">
+                            <use xlink:href="#gift-thick"></use>
+                        </svg>
+                        <img src="img/gift.jpg" alt="" class="finished__gift-image">
+                        <div class="finished__gift-content">
+                            <p>
+                                Расскажи про покупку в соцсетях
+                                и получи подарок - <a href="#">Стикерпак Outpac</a><br>
+                                <a href="#" style="color: #AC9F9F;">
+                                    (придет вместе с посылкой)
+                                </a>
+                            </p>
                         </div>
+                        <div class="finished__gift-content-mobile">
+                            Расскажи про покупку в соцсетях
+                            и получи подарок! <a href="#">Подробнее…</a>
+                        </div>
+                        <a href="#" class="finished__gift-share">
+                            Рассказать о покупке
+                        </a>
                     </div>
-                    <button class="register__return-submit" type="submit">
-                        Оформить возврат
-                    </button>
-                </form>
+                </div>
+
+                <div class="register__return-next-steps">
+                    <h2 class="register__return-next-steps-heading">
+                        Следующие шаги:
+                    </h2>
+                    <ul class="register__return-next-steps-list">
+                        <li class="register__return-next-steps-item">
+                            <div class="register__return-next-steps-card">
+                                <div class="register__return-next-steps-card-icon-container">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-doc">
+                                        <use xlink:href="#doc"></use>
+                                    </svg>
+                                </div>
+                                <div class="register__return-next-steps-card-content">
+                                    <h3 class="register__return-next-steps-card-title">
+                                        1. Подготовьте все документы
+                                    </h3>
+                                    <div class="register__return-next-steps-card-text">
+                                        В электронном письме-подтверждении о сборе возврата вы найдете список
+                                        документов, которые необходимо передать курьеру. Эти документы также находились
+                                        внутри вашей посылки. Если вы их не получили, вы можете скачать их по ссылке
+                                        ниже и распечатать
+                                    </div>
+                                    <a href="#" class="register__return-next-steps-card-btn">
+                                        Посмотреть документы
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="register__return-next-steps-item">
+                            <div class="register__return-next-steps-card">
+                                <div class="register__return-next-steps-card-icon-container">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-box">
+                                        <use xlink:href="#box"></use>
+                                    </svg>
+                                </div>
+                                <div class="register__return-next-steps-card-content">
+                                    <h3 class="register__return-next-steps-card-title">
+                                        2. Подготовьте посылку
+                                    </h3>
+                                    <div class="register__return-next-steps-card-text">
+                                        Аккуратно сложите все товары, которые подлежат возврату, а также их фирменную
+                                        упаковку в коробку Outpac. Разместите счет-фактуру и подписанную копию накладной
+                                        на внешней сотороне коробки.
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
