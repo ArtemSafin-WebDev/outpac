@@ -721,3 +721,143 @@
         padding-top: 1.8rem;
     }
 }
+
+.catalog__all-brands {
+}
+
+.catalog__all-brands-top-row {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc(-1 * (100vw - 100%) / 2);
+        right: calc(-1 * (100vw - 100%) / 2);
+        top: 0;
+        bottom: 0;
+        background-color: #fafafa;
+        z-index: -1;
+    }
+}
+
+.catalog__all-brands-alphabet {
+    display: flex;
+    margin-left: -2.2rem;
+    margin-right: -2.2rem;
+
+    @include breakpoint(mobile) {
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        @include noScrollbar();
+
+        &::after {
+            content: '';
+            display: block;
+            width: var(--content-padding);
+            flex-shrink: 0;
+        }
+    }
+}
+
+.catalog__all-brands-alphabet-link {
+    width: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #808080;
+    font-family: var(--sfui);
+    transition: background-color 0.2s, color 0.2s;
+    position: relative;
+    font-size: 1.4rem;
+    @include breakpoint(small-tablet) {
+        font-size: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        flex-shrink: 0;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    &:link,
+    &:visited {
+        color: #808080;
+    }
+
+    .no-touch &:hover,
+    &.active {
+        background-color: black;
+        color: white;
+    }
+}
+
+.catalog__all-brands-alphabet-link-letter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.catalog__all-brands-list {
+    column-count: 6;
+    column-gap: 2rem;
+
+    @include breakpoint(tablet) {
+        column-count: 5;
+    }
+    @include breakpoint(small-tablet) {
+        column-count: 4;
+    }
+
+    @include breakpoint(mobile) {
+        column-count: 2;
+    }
+}
+
+.catalog__all-brands-list-item {
+    break-inside: avoid;
+    margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.catalog__all-brands-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    .no-touch &:hover {
+        text-decoration: underline;
+    }
+}
