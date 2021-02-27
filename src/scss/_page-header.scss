@@ -437,12 +437,13 @@
         visibility: hidden;
         transition: opacity 0.3s, visibility 0s linear 0.3s;
 
-        // display: none;
+        display: none;
 
         .search-open & {
             opacity: 1;
             visibility: inherit;
             transition: opacity 0.3s, visibility 0.3s;
+            display: block;
         }
     }
 }
@@ -453,11 +454,33 @@
     flex-shrink: 0;
     color: #1d2734;
     margin-left: 2rem;
+    
     svg {
         width: 100%;
         height: 100%;
         display: block;
         fill: currentColor;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: opacity .2s;
+    }
+
+    .icon-cross {
+        opacity: 0;
+    }
+
+    .icon-search {
+        opacity: 1;
+    }
+
+    .search-open & {
+        .icon-cross {
+            opacity: 1;
+        }
+        .icon-search {
+            opacity: 0;
+        }
     }
 
     @include breakpointMF(small-tablet) {
@@ -1445,8 +1468,8 @@
 
 .page-header__cart-scroll-wrapper {
     @include breakpointMF(small-tablet) {
-        max-height: 54rem;
-        overflow-x: hidden;
+        // max-height: 54rem;
+        // overflow-x: hidden;
         margin-right: -1rem;
         padding-right: 1rem;
         overscroll-behavior: contain;

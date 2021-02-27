@@ -8,7 +8,7 @@ export default function searchModal() {
     const searchOpenBtn = document.querySelector('.page-header__search-btn')
     const searchInput = document.querySelector('.page-header__mobile-search-input')
     const search = document.querySelector('.page-header__mobile-search');
-
+    const searchSubmit = document.querySelector('.page-header__mobile-search-submit')
     const isMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches;
 
     if (!isMobile) {
@@ -57,6 +57,12 @@ export default function searchModal() {
 
 
         searchInput.addEventListener('input', () => {
+            handleSearch();
+        });
+
+        searchSubmit.addEventListener('click', event => {
+            event.preventDefault();
+            searchInput.value = '';
             handleSearch();
         })
     }

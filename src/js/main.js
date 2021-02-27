@@ -18,6 +18,7 @@ import stickyProduct from './stickyProduct';
 import recommendedSlider from './recommendedSlider';
 import timeMask from './timeMask';
 import searchModal from './searchModal';
+import changeReturnTime from './changeReturnTime';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     recommendedSlider();
     timeMask();
     searchModal();
+    changeReturnTime();
 });
 
 window.addEventListener('load', function() {
