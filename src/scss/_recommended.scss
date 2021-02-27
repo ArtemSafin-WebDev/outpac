@@ -25,7 +25,7 @@
 .recommended__products-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -2rem -4rem;
+    margin: -2.8rem -4rem;
 
     @include breakpoint(mobile) {
         margin: -2rem -0.8rem;
@@ -33,10 +33,16 @@
 }
 
 .recommended__products-list-item {
-    padding: 2rem 4rem;
+    padding: 2.8rem 4rem;
     width: 25%;
     display: flex;
     flex-direction: column;
+
+    .register__favourites & {
+        @include breakpoint(small-tablet) {
+            width: 50%;
+        }
+    }
 
     @include breakpoint(mobile) {
         padding: 2rem 0.8rem;
@@ -98,12 +104,30 @@
     font-size: 1.4rem;
     line-height: 1.7rem;
     margin-bottom: 0.5rem;
+    
 
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 1.5rem;
         margin-bottom: 0.4rem;
+    }
+}
+
+.recommended__products-card-fav {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    vertical-align: baseline;
+    color: transparent;
+
+    &.filled {
+        color: black;
+    }
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: black;
     }
 }
 
@@ -193,3 +217,4 @@
         display: none;
     }
 }
+

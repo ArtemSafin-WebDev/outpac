@@ -4292,13 +4292,13 @@ select:-webkit-autofill:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -2rem -4rem; }
+  margin: -2.8rem -4rem; }
   @media only screen and (max-width: 640px) {
     .recommended__products-list {
       margin: -2rem -0.8rem; } }
 
 .recommended__products-list-item {
-  padding: 2rem 4rem;
+  padding: 2.8rem 4rem;
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4307,6 +4307,9 @@ select:-webkit-autofill:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 768px) {
+    .register__favourites .recommended__products-list-item {
+      width: 50%; } }
   @media only screen and (max-width: 640px) {
     .recommended__products-list-item {
       padding: 2rem 0.8rem;
@@ -4375,6 +4378,22 @@ select:-webkit-autofill:focus {
       font-size: 1.2rem;
       line-height: 1.5rem;
       margin-bottom: 0.4rem; } }
+
+.recommended__products-card-fav {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: baseline;
+  color: transparent; }
+  .recommended__products-card-fav.filled {
+    color: black; }
+  .recommended__products-card-fav svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: black; }
 
 .recommended__products-card-color {
   font-weight: 500;
