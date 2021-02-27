@@ -294,13 +294,156 @@
 }
 
 .page-header__mobile-search {
+    @include breakpointMF(small-tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: rgba(black, 0.5);
+        z-index: 1600;
+        height: 100%;
+        overflow-x: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+        .search-open & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+ 
+}
+
+.page-header__mobile-search-inner {
+    @include breakpointMF(small-tablet) {
+        min-height: 70vh;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-bottom: 7.2rem;
+        background-color: #fff;
+        color: black;
+        position: relative;
+    }
+}
+
+.page-header__mobile-search-close-btn {
     display: none;
+    @include breakpointMF(small-tablet) {
+        display: block;
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            display: block;
+            fill: #000000;
+        }
+    }
+}
+
+.page-header__mobile-search-inner-container {
+    @include breakpointMF(small-tablet) {
+        width: 100%;
+        max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+        margin: 0 auto;
+        padding: 0 var(--content-padding);
+        @supports (width: max(20vw, 100px)) {
+            padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+            padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+        }
+    }
+
+    @include breakpoint(mobile) {
+        position: relative;
+        
+    }
+}
+
+.page-header__mobile-search-input-wrapper {
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8.5rem;
+    }
     @include breakpoint(mobile) {
         display: flex;
         align-items: center;
         padding: 2.6rem 1.4rem;
-
+        position: relative;
         border-bottom: 1px solid #efefef;
+    }
+}
+
+.page-header__mobile-search-suggestion {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #b3b3b3;
+    margin-bottom: 6rem;
+    font-weight: 500;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        padding: 2.4rem 1.4rem;
+    }
+    a {
+        text-decoration: underline;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        .no-touch &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.page-header__mobile-search-dropdown {
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: -1.6rem;
+        right: -1.6rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        z-index: 30;
+      
+
+        top: 100%;
+        height: auto;
+        background-color: #fff;
+        color: black;
+        padding-bottom: 2.5rem;
+        box-shadow: 0 1rem 1rem rgba(black, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+        // display: none;
+
+        .search-open & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
     }
 }
 
@@ -316,6 +459,10 @@
         display: block;
         fill: currentColor;
     }
+
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
 }
 
 .page-header__mobile-search-input {
@@ -327,6 +474,12 @@
     color: black;
     @include placeholder {
         color: #b3b3b3;
+    }
+
+    @include breakpointMF(small-tablet) {
+        font-size: 3.2rem;
+        text-transform: none;
+        padding-right: 6rem;
     }
 }
 
@@ -350,6 +503,8 @@
     @include breakpoint(mobile) {
         padding-top: 1rem;
         padding-bottom: 1rem;
+        // position: relative;
+        // z-index: 20;
     }
 }
 
@@ -516,6 +671,7 @@
     @include breakpoint(mobile) {
         flex-direction: column;
         margin-bottom: 5rem;
+        z-index: 10;
     }
 }
 
@@ -628,7 +784,6 @@
 
 .page-header__cart {
     position: relative;
-   
 
     @include breakpointMF(small-tablet) {
         z-index: 90;
@@ -1287,7 +1442,6 @@
         }
     }
 }
-
 
 .page-header__cart-scroll-wrapper {
     @include breakpointMF(small-tablet) {
