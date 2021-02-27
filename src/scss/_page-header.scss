@@ -1268,7 +1268,8 @@
     font-weight: 500;
 }
 
-.page-header__cart-item-info-quantity {
+.page-header__cart-item-info-quantity,
+.checkout__cart-card-quantity {
     width: 3.6rem;
     .choices {
         font-weight: 500;
@@ -1373,7 +1374,8 @@
     }
 }
 
-.page-header__cart-item-info-quantity select {
+.page-header__cart-item-info-quantity select,
+.checkout__cart-card-quantity select {
     @include breakpoint(mobile) {
         border: none;
         outline: none;
