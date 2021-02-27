@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     z-index: 700;
-    padding-top: 4.5rem;
+    // padding-top: 4.5rem;
     transition: background-color 0.3s, box-shadow 0.3s;
 
     &.js-fixed-header {
@@ -33,7 +33,7 @@
 
     @include breakpoint(mobile) {
         padding-bottom: 2rem;
-        padding-top: 3rem;
+        // padding-top: 3rem;
         &::before {
             content: '';
             position: absolute;
@@ -58,9 +58,46 @@
     }
 }
 
+.page-header__promo {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 0.8rem;
+    z-index: 1;
+    text-align: center;
+
+
+    .page-header.fixed &,
+    .mobile-menu-open & {
+        display: none;
+    }
+    br {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        br {
+            display: block;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc(-1 * (100vw - 100%) / 2);
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        background-color: #F3D551;
+        z-index: -1;
+    }
+}
+
 .page-header__row {
     display: flex;
     align-items: flex-start;
+
+    padding-top: 4.5rem;
 
     .page-header--filled &,
     .page-header.fixed & {
@@ -83,6 +120,10 @@
 
     .page-header.fixed & {
         border: none;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
     }
 }
 
