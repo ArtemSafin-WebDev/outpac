@@ -14,12 +14,12 @@
 }
 
 .home__content {
-    min-height: 100vh;
+  
     display: flex;
     flex-direction: column;
 
     @include breakpoint(small-tablet) {
-        min-height: 80rem;
+      
         flex-grow: 1;
        
     }
@@ -35,6 +35,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    min-height: 100vh;
+    
+    @include breakpoint(small-tablet) {
+        min-height: 80rem;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: calc(100vh - 8rem);
+    }
     .swiper-container {
         margin: 0;
         flex-grow: 1;
@@ -47,10 +56,10 @@
     .swiper-wrapper {
         flex-grow: 1;
 
-        @include breakpoint(mobile) {
-            flex-direction: column;
-            flex-grow: 0;
-        }
+        // @include breakpoint(mobile) {
+        //     flex-direction: column;
+        //     flex-grow: 0;
+        // }
     }
 
     .swiper-slide {
@@ -68,10 +77,10 @@
 
   
 
-    @include breakpoint(mobile) {
-        min-height: calc(100vh - 10rem);
-        flex-grow: 0;
-    }
+    // @include breakpoint(mobile) {
+    //     min-height: calc(100vh - 10rem);
+    //     flex-grow: 0;
+    // }
 }
 
 .home__slider-card-bg {
