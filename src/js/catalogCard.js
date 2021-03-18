@@ -7,9 +7,7 @@ export default function catalogCard() {
     const elements = Array.from(document.querySelectorAll('.js-catalog-card-gallery'));
 
     const initializeCatalogCardGallery = element => {
-        if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
-            return;
-        }
+     
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {

@@ -8,9 +8,7 @@ export default function recommendedSlider() {
     const elements = Array.from(document.querySelectorAll('.js-recommended-gallery'));
 
     const initializeRecommendedGallery = element => {
-        if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
-            return;
-        }
+      
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
