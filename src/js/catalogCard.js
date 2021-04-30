@@ -1,10 +1,10 @@
 import { Swiper, Navigation } from 'swiper';
-import { MOBILE_WIDTH } from './constants';
+
 
 Swiper.use([Navigation]);
 
 export default function catalogCard() {
-    const elements = Array.from(document.querySelectorAll('.js-catalog-card-gallery'));
+  
 
     const initializeCatalogCardGallery = element => {
      
@@ -20,11 +20,19 @@ export default function catalogCard() {
         });
     };
 
+    const initializeCatalogCardGalleries = () => {
+        const elements = Array.from(document.querySelectorAll('.js-catalog-card-gallery'));
+        elements.forEach(element => {
+            initializeCatalogCardGallery(element);
+        });
+    }
+
+    initializeCatalogCardGalleries();
+
     window.catalogCard = {};
 
     window.catalogCard.initializeCatalogCardGallery = initializeCatalogCardGallery;
 
-    elements.forEach(element => {
-        initializeCatalogCardGallery(element);
-    });
+    window.catalogCard.initializeCatalogGalleries = initializeCatalogCardGalleries;
+   
 }
